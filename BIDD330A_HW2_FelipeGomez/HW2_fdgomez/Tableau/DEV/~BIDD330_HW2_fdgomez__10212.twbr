@@ -1,0 +1,1352 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='vw_Fact_Covid_2023+ (Black_Unemployment)' inline='true' name='federated.1vq1du70058nmr19l82eq13pb8fj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uwc-studentsql.continuum.uw.edu\uwcbiddsql' name='sqlserver.023hdjx1uidlp31a510k709kzdd7'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='Black_Unemployment' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='uwc-studentsql.continuum.uw.edu\uwcbiddsql' username='fdgomez' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimCountry' table='[dbo].[DimCountry]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='vw_Fact_Covid_2023' table='[dbo].[vw_Fact_Covid_2023]' type='table' />
+          <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimCountry' table='[dbo].[DimCountry]' type='table' />
+          <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimDate' table='[dbo].[DimDate]' type='table' />
+          <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimState' table='[dbo].[DimState]' type='table' />
+          <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='FactUnemployment' table='[dbo].[FactUnemployment]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Admin_Region_1]' value='[vw_Fact_Covid_2023].[Admin_Region_1]' />
+          <map key='[Confirmed]' value='[vw_Fact_Covid_2023].[Confirmed]' />
+          <map key='[Continued Claims]' value='[FactUnemployment].[Continued Claims]' />
+          <map key='[Country]' value='[DimCountry].[Country]' />
+          <map key='[Country_Region]' value='[vw_Fact_Covid_2023].[Country_Region]' />
+          <map key='[Covered Employment]' value='[FactUnemployment].[Covered Employment]' />
+          <map key='[Deaths]' value='[vw_Fact_Covid_2023].[Deaths]' />
+          <map key='[DimID]' value='[DimCountry].[DimID]' />
+          <map key='[DimState_Key]' value='[DimState].[DimState_Key]' />
+          <map key='[FactCovid_Key]' value='[vw_Fact_Covid_2023].[FactCovid_Key]' />
+          <map key='[FactUnemployment_Key]' value='[FactUnemployment].[FactUnemployment_Key]' />
+          <map key='[Filed week ended]' value='[FactUnemployment].[Filed week ended]' />
+          <map key='[Initial Claims]' value='[FactUnemployment].[Initial Claims]' />
+          <map key='[Insured Unemployment Rate]' value='[FactUnemployment].[Insured Unemployment Rate]' />
+          <map key='[Reflecting Week Ended]' value='[FactUnemployment].[Reflecting Week Ended]' />
+          <map key='[State (DimState)]' value='[DimState].[State]' />
+          <map key='[State]' value='[FactUnemployment].[State]' />
+          <map key='[TheDate]' value='[DimDate].[TheDate]' />
+          <map key='[TheDayName]' value='[DimDate].[TheDayName]' />
+          <map key='[TheDayOfWeek]' value='[DimDate].[TheDayOfWeek]' />
+          <map key='[TheDayOfYear]' value='[DimDate].[TheDayOfYear]' />
+          <map key='[TheDay]' value='[DimDate].[TheDay]' />
+          <map key='[TheFirstOfMonth]' value='[DimDate].[TheFirstOfMonth]' />
+          <map key='[TheISOWeek]' value='[DimDate].[TheISOWeek]' />
+          <map key='[TheLastOfYear]' value='[DimDate].[TheLastOfYear]' />
+          <map key='[TheMonthName]' value='[DimDate].[TheMonthName]' />
+          <map key='[TheMonth]' value='[DimDate].[TheMonth]' />
+          <map key='[TheQuarter]' value='[DimDate].[TheQuarter]' />
+          <map key='[TheWeek]' value='[DimDate].[TheWeek]' />
+          <map key='[TheYear]' value='[DimDate].[TheYear]' />
+          <map key='[Updated]' value='[vw_Fact_Covid_2023].[Updated]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>FactCovid_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[FactCovid_Key]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>FactCovid_Key</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Updated</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Updated]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>Updated</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Confirmed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Confirmed]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>Confirmed</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Deaths]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country_Region]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>Country_Region</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Admin_Region_1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Admin_Region_1]</local-name>
+            <parent-name>[vw_Fact_Covid_2023]</parent-name>
+            <remote-alias>Admin_Region_1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DimID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[DimID]</local-name>
+            <parent-name>[DimCountry]</parent-name>
+            <remote-alias>DimID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimCountry_94151990879E45F780F1DB4153A207F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[DimCountry]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimCountry_94151990879E45F780F1DB4153A207F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[TheDate]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheDate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheDay</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheDay]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheDay</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheDayName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TheDayName]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheDayName</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheWeek</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheWeek]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheWeek</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheISOWeek</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheISOWeek]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheISOWeek</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheDayOfWeek</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheDayOfWeek]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheDayOfWeek</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheMonth</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheMonth]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheMonth</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheMonthName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[TheMonthName]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheMonthName</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheQuarter</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheQuarter]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheQuarter</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheYear</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheYear]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheYear</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheFirstOfMonth</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[TheFirstOfMonth]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheFirstOfMonth</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheLastOfYear</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[TheLastOfYear]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheLastOfYear</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TheDayOfYear</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TheDayOfYear]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>TheDayOfYear</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DimState_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[DimState_Key]</local-name>
+            <parent-name>[DimState]</parent-name>
+            <remote-alias>DimState_Key</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State (DimState)]</local-name>
+            <parent-name>[DimState]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FactUnemployment_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[FactUnemployment_Key]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>FactUnemployment_Key</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Filed week ended</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Filed week ended]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Filed week ended</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Initial Claims</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Initial Claims]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Initial Claims</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reflecting Week Ended</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Reflecting Week Ended]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Reflecting Week Ended</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Continued Claims</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Continued Claims]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Continued Claims</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Covered Employment</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Covered Employment]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Covered Employment</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Insured Unemployment Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Insured Unemployment Rate]</local-name>
+            <parent-name>[FactUnemployment]</parent-name>
+            <remote-alias>Insured Unemployment Rate</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Admin Region 1' datatype='string' name='[Admin_Region_1]' role='dimension' type='nominal' />
+      <column caption='CNT(FactCovidKey)' datatype='integer' name='[Calculation_319474106674573312]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([FactCovid_Key])' />
+      </column>
+      <column caption='CNT(FactUnemploymentKey)' datatype='integer' name='[Calculation_319474106675019777]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([FactUnemployment_Key])' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Region' datatype='string' name='[Country_Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Dim ID' datatype='integer' name='[DimID]' role='dimension' type='ordinal' />
+      <column caption='DimState Key' datatype='integer' name='[DimState_Key]' role='dimension' type='ordinal' />
+      <column caption='FactCovid Key' datatype='integer' name='[FactCovid_Key]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='FactUnemployment Key' datatype='integer' name='[FactUnemployment_Key]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[State (DimState)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='The Date' datatype='date' name='[TheDate]' role='dimension' type='ordinal' />
+      <column caption='The Day Name' datatype='string' name='[TheDayName]' role='dimension' type='nominal' />
+      <column caption='The Day Of Week' datatype='integer' name='[TheDayOfWeek]' role='dimension' type='quantitative' />
+      <column caption='The Day Of Year' datatype='integer' name='[TheDayOfYear]' role='dimension' type='quantitative' />
+      <column caption='The Day' datatype='integer' name='[TheDay]' role='dimension' type='quantitative' />
+      <column caption='The First Of Month' datatype='date' name='[TheFirstOfMonth]' role='dimension' type='ordinal' />
+      <column caption='The ISO Week' datatype='integer' name='[TheISOWeek]' role='dimension' type='quantitative' />
+      <column caption='The Last Of Year' datatype='date' name='[TheLastOfYear]' role='dimension' type='ordinal' />
+      <column caption='The Month Name' datatype='string' name='[TheMonthName]' role='dimension' type='nominal' />
+      <column caption='The Month' datatype='integer' name='[TheMonth]' role='dimension' type='quantitative' />
+      <column caption='The Quarter' datatype='integer' name='[TheQuarter]' role='dimension' type='quantitative' />
+      <column caption='The Week' datatype='integer' name='[TheWeek]' role='dimension' type='quantitative' />
+      <column caption='The Year' datatype='integer' name='[TheYear]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DimCountry' datatype='table' name='[__tableau_internal_object_id__].[DimCountry_94151990879E45F780F1DB4153A207F7]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DimDate' datatype='table' name='[__tableau_internal_object_id__].[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DimState' datatype='table' name='[__tableau_internal_object_id__].[DimState_E55ABD3421DC4C4E978590AEA37626D4]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='FactUnemployment' datatype='table' name='[__tableau_internal_object_id__].[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='vw_Fact_Covid_2023' datatype='table' name='[__tableau_internal_object_id__].[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/BIDD/OneDrive - UW/BIDD 330A/BIDD330A_HW2_FelipeGomez/HW2_fdgomez/Tableau/DEV/vw_Fact_Covid_2023+ (Black_Unemployment).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/17/2024 02:03:43 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='DimCountry_94151990879E45F780F1DB4153A207F7' table='[Extract].[DimCountry_94151990879E45F780F1DB4153A207F7]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89' table='[Extract].[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]' type='table' />
+            <relation name='DimCountry_94151990879E45F780F1DB4153A207F7' table='[Extract].[DimCountry_94151990879E45F780F1DB4153A207F7]' type='table' />
+            <relation name='DimDate_2096E6B0C73D4B72829F95DFD85AD7DA' table='[Extract].[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]' type='table' />
+            <relation name='DimState_E55ABD3421DC4C4E978590AEA37626D4' table='[Extract].[DimState_E55ABD3421DC4C4E978590AEA37626D4]' type='table' />
+            <relation name='FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8' table='[Extract].[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[Admin_Region_1]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[Admin_Region_1]' />
+            <map key='[Confirmed]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[Confirmed]' />
+            <map key='[Continued Claims]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Continued Claims]' />
+            <map key='[Country]' value='[DimCountry_94151990879E45F780F1DB4153A207F7].[Country]' />
+            <map key='[Country_Region]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[Country_Region]' />
+            <map key='[Covered Employment]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Covered Employment]' />
+            <map key='[Deaths]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[Deaths]' />
+            <map key='[DimID]' value='[DimCountry_94151990879E45F780F1DB4153A207F7].[DimID]' />
+            <map key='[DimState_Key]' value='[DimState_E55ABD3421DC4C4E978590AEA37626D4].[DimState_Key]' />
+            <map key='[FactCovid_Key]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[FactCovid_Key]' />
+            <map key='[FactUnemployment_Key]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[FactUnemployment_Key]' />
+            <map key='[Filed week ended]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Filed week ended]' />
+            <map key='[Initial Claims]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Initial Claims]' />
+            <map key='[Insured Unemployment Rate]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Insured Unemployment Rate]' />
+            <map key='[Reflecting Week Ended]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[Reflecting Week Ended]' />
+            <map key='[State (DimState)]' value='[DimState_E55ABD3421DC4C4E978590AEA37626D4].[State]' />
+            <map key='[State]' value='[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8].[State]' />
+            <map key='[TheDate]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheDate]' />
+            <map key='[TheDayName]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheDayName]' />
+            <map key='[TheDayOfWeek]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheDayOfWeek]' />
+            <map key='[TheDayOfYear]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheDayOfYear]' />
+            <map key='[TheDay]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheDay]' />
+            <map key='[TheFirstOfMonth]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheFirstOfMonth]' />
+            <map key='[TheISOWeek]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheISOWeek]' />
+            <map key='[TheLastOfYear]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheLastOfYear]' />
+            <map key='[TheMonthName]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheMonthName]' />
+            <map key='[TheMonth]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheMonth]' />
+            <map key='[TheQuarter]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheQuarter]' />
+            <map key='[TheWeek]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheWeek]' />
+            <map key='[TheYear]' value='[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA].[TheYear]' />
+            <map key='[Updated]' value='[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89].[Updated]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='vw_Fact_Covid_2023+ (Black_Unemployment)' increment-value='%null%' refresh-type='create' rows-inserted='184390' timestamp-start='2024-04-17 02:03:39.229' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>FactCovid_Key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FactCovid_Key]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>FactCovid_Key</remote-alias>
+              <ordinal>0</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>170931</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Updated</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Updated]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>Updated</remote-alias>
+              <ordinal>1</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Confirmed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Confirmed]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>Confirmed</remote-alias>
+              <ordinal>2</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55071</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Deaths</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Deaths]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>Deaths</remote-alias>
+              <ordinal>3</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6191</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_Region]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>Country_Region</remote-alias>
+              <ordinal>4</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>764</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Admin_Region_1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Admin_Region_1]</local-name>
+              <parent-name>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</parent-name>
+              <remote-alias>Admin_Region_1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>vw_Fact_Covid_2023</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2004</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DimID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DimID]</local-name>
+              <parent-name>[DimCountry_94151990879E45F780F1DB4153A207F7]</parent-name>
+              <remote-alias>DimID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>DimCountry</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>246</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimCountry_94151990879E45F780F1DB4153A207F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[DimCountry_94151990879E45F780F1DB4153A207F7]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>7</ordinal>
+              <family>DimCountry</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>246</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimCountry_94151990879E45F780F1DB4153A207F7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[TheDate]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheDate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>DimDate</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1554</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheDay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheDay]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheDay</remote-alias>
+              <ordinal>9</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheDayName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TheDayName]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheDayName</remote-alias>
+              <ordinal>10</ordinal>
+              <family>DimDate</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheWeek</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheWeek]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheWeek</remote-alias>
+              <ordinal>11</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheISOWeek</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheISOWeek]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheISOWeek</remote-alias>
+              <ordinal>12</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheDayOfWeek</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheDayOfWeek]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheDayOfWeek</remote-alias>
+              <ordinal>13</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheMonth]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheMonth</remote-alias>
+              <ordinal>14</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheMonthName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TheMonthName]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheMonthName</remote-alias>
+              <ordinal>15</ordinal>
+              <family>DimDate</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheQuarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheQuarter]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheQuarter</remote-alias>
+              <ordinal>16</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheYear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheYear]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheYear</remote-alias>
+              <ordinal>17</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheFirstOfMonth</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[TheFirstOfMonth]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheFirstOfMonth</remote-alias>
+              <ordinal>18</ordinal>
+              <family>DimDate</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheLastOfYear</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[TheLastOfYear]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheLastOfYear</remote-alias>
+              <ordinal>19</ordinal>
+              <family>DimDate</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TheDayOfYear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TheDayOfYear]</local-name>
+              <parent-name>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</parent-name>
+              <remote-alias>TheDayOfYear</remote-alias>
+              <ordinal>20</ordinal>
+              <family>DimDate</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>368</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DimState_Key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DimState_Key]</local-name>
+              <parent-name>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</parent-name>
+              <remote-alias>DimState_Key</remote-alias>
+              <ordinal>21</ordinal>
+              <family>DimState</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State (DimState)]</local-name>
+              <parent-name>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>22</ordinal>
+              <family>DimState</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DimState_E55ABD3421DC4C4E978590AEA37626D4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FactUnemployment_Key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FactUnemployment_Key]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>FactUnemployment_Key</remote-alias>
+              <ordinal>23</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11609</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>24</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Filed week ended</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Filed week ended]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Filed week ended</remote-alias>
+              <ordinal>25</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Initial Claims</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Initial Claims]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Initial Claims</remote-alias>
+              <ordinal>26</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4258</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Reflecting Week Ended</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Reflecting Week Ended]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Reflecting Week Ended</remote-alias>
+              <ordinal>27</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Continued Claims</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Continued Claims]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Continued Claims</remote-alias>
+              <ordinal>28</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7760</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Covered Employment</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Covered Employment]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Covered Employment</remote-alias>
+              <ordinal>29</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1517</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Insured Unemployment Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Insured Unemployment Rate]</local-name>
+              <parent-name>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</parent-name>
+              <remote-alias>Insured Unemployment Rate</remote-alias>
+              <ordinal>30</ordinal>
+              <family>FactUnemployment</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1013</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='FactCovid_Key' />
+        <field-sort-custom-order field='Calculation_319474106674573312' />
+        <field-sort-custom-order field='Updated' />
+        <field-sort-custom-order field='Confirmed' />
+        <field-sort-custom-order field='Deaths' />
+        <field-sort-custom-order field='Country_Region' />
+        <field-sort-custom-order field='Admin_Region_1' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='DimCountry' id='DimCountry_94151990879E45F780F1DB4153A207F7'>
+            <properties context=''>
+              <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimCountry' table='[dbo].[DimCountry]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='DimCountry_94151990879E45F780F1DB4153A207F7' table='[Extract].[DimCountry_94151990879E45F780F1DB4153A207F7]' type='table' />
+            </properties>
+          </object>
+          <object caption='DimDate' id='DimDate_2096E6B0C73D4B72829F95DFD85AD7DA'>
+            <properties context=''>
+              <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimDate' table='[dbo].[DimDate]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='DimDate_2096E6B0C73D4B72829F95DFD85AD7DA' table='[Extract].[DimDate_2096E6B0C73D4B72829F95DFD85AD7DA]' type='table' />
+            </properties>
+          </object>
+          <object caption='DimState' id='DimState_E55ABD3421DC4C4E978590AEA37626D4'>
+            <properties context=''>
+              <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='DimState' table='[dbo].[DimState]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='DimState_E55ABD3421DC4C4E978590AEA37626D4' table='[Extract].[DimState_E55ABD3421DC4C4E978590AEA37626D4]' type='table' />
+            </properties>
+          </object>
+          <object caption='FactUnemployment' id='FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8'>
+            <properties context=''>
+              <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='FactUnemployment' table='[dbo].[FactUnemployment]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8' table='[Extract].[FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8]' type='table' />
+            </properties>
+          </object>
+          <object caption='vw_Fact_Covid_2023' id='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89'>
+            <properties context=''>
+              <relation connection='sqlserver.023hdjx1uidlp31a510k709kzdd7' name='vw_Fact_Covid_2023' table='[dbo].[vw_Fact_Covid_2023]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89' table='[Extract].[vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Country_Region]' />
+              <expression op='[Country]' />
+            </expression>
+            <first-end-point object-id='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89' />
+            <second-end-point object-id='DimCountry_94151990879E45F780F1DB4153A207F7' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Updated]' />
+              <expression op='[TheDate]' />
+            </expression>
+            <first-end-point object-id='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89' />
+            <second-end-point object-id='DimDate_2096E6B0C73D4B72829F95DFD85AD7DA' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Admin_Region_1]' />
+              <expression op='[State (DimState)]' />
+            </expression>
+            <first-end-point object-id='vw_Fact_Covid_2023_8B48F290843D4A3794D24A5DA59A4F89' />
+            <second-end-point object-id='DimState_E55ABD3421DC4C4E978590AEA37626D4' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[State (DimState)]' />
+              <expression op='[State]' />
+            </expression>
+            <first-end-point object-id='DimState_E55ABD3421DC4C4E978590AEA37626D4' />
+            <second-end-point object-id='FactUnemployment_78A6BFB277534E98BA1D87BCB05975F8' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='FactCovid_StateRowCount'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vw_Fact_Covid_2023+ (Black_Unemployment)' name='federated.1vq1du70058nmr19l82eq13pb8fj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vq1du70058nmr19l82eq13pb8fj'>
+            <column caption='CNT(FactCovidKey)' datatype='integer' name='[Calculation_319474106674573312]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([FactCovid_Key])' />
+            </column>
+            <column caption='FactCovid Key' datatype='integer' name='[FactCovid_Key]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[State (DimState)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State (DimState)]' derivation='None' name='[none:State (DimState):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_319474106674573312]' derivation='User' name='[usr:Calculation_319474106674573312:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+          </pane>
+        </panes>
+        <rows>[federated.1vq1du70058nmr19l82eq13pb8fj].[none:State (DimState):nk]</rows>
+        <cols>[federated.1vq1du70058nmr19l82eq13pb8fj].[usr:Calculation_319474106674573312:qk]</cols>
+      </table>
+      <simple-id uuid='{01463256-26C8-4D3B-8C30-178B75AFECF4}' />
+    </worksheet>
+    <worksheet name='FactUnemployment_RowCount'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='vw_Fact_Covid_2023+ (Black_Unemployment)' name='federated.1vq1du70058nmr19l82eq13pb8fj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vq1du70058nmr19l82eq13pb8fj'>
+            <column aggregation='Sum' caption='FactUnemployment Key' datatype='integer' name='[FactUnemployment_Key]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[State (DimState)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[FactUnemployment_Key]' derivation='Count' name='[cnt:FactUnemployment_Key:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[State (DimState)]' derivation='None' name='[none:State (DimState):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+          </pane>
+        </panes>
+        <rows>[federated.1vq1du70058nmr19l82eq13pb8fj].[none:State (DimState):nk]</rows>
+        <cols>[federated.1vq1du70058nmr19l82eq13pb8fj].[cnt:FactUnemployment_Key:qk]</cols>
+      </table>
+      <simple-id uuid='{08E54D14-5421-403B-869D-6B98ADC2C2A0}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='FactCovid_StateRowCount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B1D48ED4-C5E4-48C4-8881-BB74CE7D7EF2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='FactUnemployment_RowCount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BECCECB2-B018-43D7-8B66-15156240D574}' />
+    </window>
+  </windows>
+</workbook>
