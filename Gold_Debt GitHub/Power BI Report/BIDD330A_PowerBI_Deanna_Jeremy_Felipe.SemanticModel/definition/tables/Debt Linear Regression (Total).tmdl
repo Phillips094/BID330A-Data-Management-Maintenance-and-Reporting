@@ -1,0 +1,144 @@
+table 'Debt Linear Regression (Total)'
+	isHidden
+	lineageTag: 0aa5319d-340b-4b63-a5f6-a9f1c7aadf85
+
+	column Slope1
+		dataType: double
+		isHidden
+		lineageTag: 90de2d54-cc4d-41a5-ae07-b0768441e77b
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Slope1]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Intercept
+		dataType: double
+		isHidden
+		lineageTag: 479dc770-15cb-4bd6-ac61-3c98665d05f5
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Intercept]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorSlope1
+		dataType: double
+		isHidden
+		lineageTag: ce3d628c-83fa-464d-ae00-6e1cc87f3935
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [StandardErrorSlope1]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorIntercept
+		dataType: double
+		isHidden
+		lineageTag: 919a94f1-6ce8-4cb6-aaa3-6e7a6f9cc84a
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [StandardErrorIntercept]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CoefficientOfDetermination
+		dataType: double
+		isHidden
+		lineageTag: 23cdc958-9664-48d0-8b7e-67f2faebed32
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [CoefficientOfDetermination]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardError
+		dataType: double
+		isHidden
+		lineageTag: 620c92ab-37cd-47f1-8905-6be4fa2fd6af
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [StandardError]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FStatistic
+		dataType: double
+		isHidden
+		lineageTag: 092265ce-d9e1-49d0-b0f8-9b0256388755
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [FStatistic]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DegreesOfFreedom
+		dataType: double
+		isHidden
+		lineageTag: 92d279d3-7cb1-4161-850b-e71f6327bbc4
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [DegreesOfFreedom]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RegressionSumOfSquares
+		dataType: double
+		isHidden
+		lineageTag: bbe02392-fa11-4c7b-b9ab-dccc6c214543
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [RegressionSumOfSquares]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResidualSumOfSquares
+		dataType: double
+		isHidden
+		lineageTag: 647a3b38-600b-425c-b345-4438e625c80b
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [ResidualSumOfSquares]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Debt Linear Regression (Total)' = calculated
+		mode: import
+		source =
+				
+				VAR _DebtLR = LINESTX(ALLSELECTED('Dim Dates'), AVERAGE('Fact Debt'[Total_Public_Debt_Outstanding]), 'Dim Dates'[FullDate])
+				
+				RETURN _DebtLR
+
+	annotation PBI_Id = 8a945ae56ddc4c2890e029ae8b6e59ca
+

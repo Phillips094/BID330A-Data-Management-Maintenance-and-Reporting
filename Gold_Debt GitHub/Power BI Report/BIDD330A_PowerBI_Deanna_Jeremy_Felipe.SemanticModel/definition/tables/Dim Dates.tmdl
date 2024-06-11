@@ -1,0 +1,146 @@
+table 'Dim Dates'
+	lineageTag: 1eb30080-5431-4b44-8382-63892f647aca
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Keys
+		lineageTag: 6cf9715c-ce6b-4f41-8177-c1cebef64220
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column FullDate
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Dim Dates Fields
+		lineageTag: 1f0f11b0-cdb1-421c-9e70-3fe570058c32
+		summarizeBy: none
+		sourceColumn: FullDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FullDateName
+		dataType: string
+		displayFolder: Dim Dates Fields
+		lineageTag: 622a7693-12b2-47db-9421-9f4c9661784a
+		summarizeBy: none
+		sourceColumn: FullDateName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekID
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Fields
+		lineageTag: c8a1c07b-280e-4261-8605-4cf7dab34747
+		summarizeBy: none
+		sourceColumn: WeekID
+
+		annotation SummarizationSetBy = User
+
+	column MonthID
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Fields
+		lineageTag: 091e08c3-8dc3-4d8d-adb4-0578d94f8e1f
+		summarizeBy: none
+		sourceColumn: MonthID
+
+		annotation SummarizationSetBy = User
+
+	column MonthName
+		dataType: string
+		displayFolder: Dim Dates Fields
+		lineageTag: e3669165-b521-439a-a51a-a6752b374a06
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthID
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Fields
+		lineageTag: 9572e9ab-3862-4144-ab28-4c8476ef5626
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column YearQuarter
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Fields
+		lineageTag: e20ffcd0-6841-4bbe-a1ea-09c7217e5f67
+		summarizeBy: none
+		sourceColumn: YearQuarter
+
+		annotation SummarizationSetBy = User
+
+	column YearID
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Dates Fields
+		lineageTag: 49961533-671a-42da-9d95-28fd5c5fa707
+		summarizeBy: none
+		sourceColumn: YearID
+
+		annotation SummarizationSetBy = User
+
+	column YearName
+		dataType: string
+		displayFolder: Dim Dates Fields
+		lineageTag: 5003b8cd-ed83-40ac-a681-840977e4a725
+		summarizeBy: none
+		sourceColumn: YearName
+		sortByColumn: YearID
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Date Hierarchy'
+		lineageTag: 140f354a-a288-4d16-9f2b-7d887748c605
+
+		level YearName
+			lineageTag: f7f17b8f-3561-472c-84c8-0efaf55f7d9b
+			column: YearName
+
+		level YearQuarter
+			lineageTag: 55376099-cb74-45e9-8034-6adbb68406c3
+			column: YearQuarter
+
+		level MonthName
+			lineageTag: c6be89b1-fb73-4086-8d52-de8be283b2e0
+			column: MonthName
+
+		level WeekID
+			lineageTag: 08994132-b9b0-4d0c-b7d5-7b6f86748701
+			column: WeekID
+
+		level FullDate
+			lineageTag: 1ee71cb9-4e0d-42b6-9699-4f9b91ccb7e3
+			column: FullDate
+
+	partition 'Dim Dates' = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(#"UW Server", #"Database Gold_Debt"),
+				    dbo_vDimDates = Source{[Schema="dbo",Item="vDimDates"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_vDimDates,{{"FullDate", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,20 @@
+relationship AutoDetected_58e61cfc-eddb-411d-84e2-fed41b19dfb5
+	fromColumn: 'Fact Covid'.RegionKey
+	toColumn: 'Dim Regions'.RegionKey
+
+relationship AutoDetected_2675ed20-e858-4848-bfda-9c6bde164cff
+	fromColumn: 'Fact Covid'.DateKey
+	toColumn: 'Dim Dates'.DateKey
+
+relationship AutoDetected_c42b7a12-327f-4044-b264-3cb34e683163
+	fromColumn: 'Fact Covid'.CountryKey
+	toColumn: 'Dim Countries'.CountryKey
+
+relationship 11651462-3e64-7471-7ba9-9390766b6734
+	fromColumn: 'Fact Debt'.DateKey
+	toColumn: 'Dim Dates'.DateKey
+
+relationship 4a6cb279-afa3-ad29-d051-52ecf5fe5aba
+	fromColumn: 'ETL Log'.ETLDate
+	toColumn: 'Dim Dates'.FullDate
+

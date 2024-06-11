@@ -1,0 +1,73 @@
+EVALUATE
+	UNION(
+		ROW(
+			"Table", "Dim Countries",
+			"Column", "Country",
+			"Count", COUNT('Dim Countries'[Country]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('Dim Countries'[Country]),
+			"Null Count", COUNTROWS('Dim Countries') - COUNT('Dim Countries'[Country]),
+			"Min", MIN('Dim Countries'[Country]),
+			"Max", MAX('Dim Countries'[Country]),
+			"Median", "N/A",
+			"Mean", "N/A",
+			"Standard Deviation", "N/A",
+			"Zeros", "N/A",
+			"Evens", "N/A",
+			"Odds", "N/A",
+			"P25", "N/A",
+			"P75", "N/A",
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		),
+		ROW(
+			"Table", "Dim Countries",
+			"Column", "CountryKey",
+			"Count", COUNT('Dim Countries'[CountryKey]),
+			"Distinct Values", DISTINCTCOUNTNOBLANK('Dim Countries'[CountryKey]),
+			"Null Count", COUNTROWS('Dim Countries') - COUNT('Dim Countries'[CountryKey]),
+			"Min", MIN('Dim Countries'[CountryKey]),
+			"Max", MAX('Dim Countries'[CountryKey]),
+			"Median", MEDIAN('Dim Countries'[CountryKey]),
+			"Mean", AVERAGE('Dim Countries'[CountryKey]),
+			"Standard Deviation", STDEV.P('Dim Countries'[CountryKey]),
+			"Zeros", COALESCE(
+				COUNTROWS(FILTER(
+					'Dim Countries',
+					'Dim Countries'[CountryKey] = 0
+				)),
+				0
+			),
+			"Evens", COALESCE(
+				COUNTROWS(FILTER(
+					'Dim Countries',
+					MOD(
+						'Dim Countries'[CountryKey],
+						2
+					) = 0
+				)),
+				0
+			),
+			"Odds", COALESCE(
+				COUNTROWS(FILTER(
+					'Dim Countries',
+					MOD(
+						'Dim Countries'[CountryKey],
+						2
+					) <> 0
+				)),
+				0
+			),
+			"P25", PERCENTILE.INC(
+				'Dim Countries'[CountryKey],
+				0.25
+			),
+			"P75", PERCENTILE.INC(
+				'Dim Countries'[CountryKey],
+				0.75
+			),
+			"Range in Days", "N/A",
+			"Range in Months", "N/A",
+			"Range in Years", "N/A"
+		)
+	)

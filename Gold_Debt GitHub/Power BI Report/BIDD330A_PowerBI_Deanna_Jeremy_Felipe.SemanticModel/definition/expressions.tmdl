@@ -1,0 +1,44 @@
+/// UW Server
+expression 'UW Server' = "uwc-studentsql.continuum.uw.edu\uwcbiddsql" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: f9404cd9-6ffe-41b9-a249-02ad5394b47e
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression database = "Black_Unemployment" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: fcadf3aa-e73a-42d4-8457-1a14a0b5424f
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+expression username = "fdgomez" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 65050469-57ad-4b33-8759-879912200ce4
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+/// LocalHost Server For SQL Server Connection
+expression 'LocalHost Server' = "LocalHost" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: fd2067e1-fb92-4db2-95fa-2bca5970945f
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+/// LocalHost Server Database: Gold_Debt
+expression 'LocalHost Server Database Gold_Debt' = "Gold_Debt" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 8e380973-bf73-43d8-8789-90426098eb41
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+/// Database Gold_Debt
+expression 'Database Gold_Debt' = "Gold_Debt" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 750657d8-913a-4e79-8011-12b1b5ba899b
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

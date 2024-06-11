@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../BIDD330A_PowerBI_Deanna_Jeremy_Felipe.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

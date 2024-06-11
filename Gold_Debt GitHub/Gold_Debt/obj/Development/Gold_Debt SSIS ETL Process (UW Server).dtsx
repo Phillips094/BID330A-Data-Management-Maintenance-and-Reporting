@@ -1,0 +1,2314 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/21/2024 6:19:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-L3H8CVG"
+  DTS:CreatorName="DESKTOP-L3H8CVG\Felipe"
+  DTS:DTSID="{5B2233FE-9D2E-4F05-96E3-EFE6A9F11085}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Gold_Debt SSIS ETL Process  UW Server"
+  DTS:PackageType="5"
+  DTS:VersionBuild="176"
+  DTS:VersionGUID="{863B2AE5-8D05-4AAC-8FF3-AE89B3617438}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[uwc-studentsql.continuum.uw.edu\uwcbiddsql.Gold_Debt.fdgomez]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+      DTS:ObjectName="uwc-studentsql.continuum.uw.edu\uwcbiddsql.Gold_Debt.fdgomez">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=uwc-studentsql.continuum.uw.edu\uwcbiddsql;User ID=fdgomez;Initial Catalog=Gold_Debt;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{F17C2559-7741-4B50-83FB-9CA84D666CB4}uwc-studentsql.continuum.uw.edu\uwcbiddsql.Gold_Debt.fdgomez;Initial File Name=;Server SPN=;Authentication=;Access Token=;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIiRhD8CkjEqMPYOH28MixQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACjcCucZ11KKMVFKoPGFKmgTkeAvsB6NncDOmTrRUldBgAAAAAOgAAAAAIAACAAAABmPSBoiVuWA59Rm0rOC3rz+L9ankZ1BzBbfD+gTrtrVCAAAABh1+l4wt36xotCk1lBdCnPRoA7sNybAegOLNDkLG0TAUAAAADy5TrQpyfvRfHsnUdI0Te4fMmixneCjKkVYRVm0QmCRmbLyoF1aRIOH4659cSRNODjO7e7rJQVlpt8yE98W1XP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[uwc-studentsql.continuum.uw.edu\uwcbiddsql.master.fdgomez]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E78BBC48-2D55-4F01-8306-42AB3343756B}"
+      DTS:ObjectName="uwc-studentsql.continuum.uw.edu\uwcbiddsql.master.fdgomez">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=uwc-studentsql.continuum.uw.edu\uwcbiddsql;User ID=fdgomez;Initial Catalog=master;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{E78BBC48-2D55-4F01-8306-42AB3343756B}uwc-studentsql.continuum.uw.edu\uwcbiddsql.master.fdgomez;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIiRhD8CkjEqMPYOH28MixQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADMj21JFUssK94OAYGf4agYsSsgj5n/NoOD9DnEVRjckgAAAAAOgAAAAAIAACAAAAAgjC53Ycfisda5kvSmB8BoS1cibXUxOoropDqZ6qK8hyAAAAC+0zUX9xA9MxWA3GbYk2riu1Bum2K5SVZdgvohfMyi1EAAAABJyIq1BTOlRUKY8zVfxri4gXvzfAD6nhQ4/F1g0ii4bzlDZHAQdt7LSVXe7E3bDh0X1/W34EHVE2WkatWgMiuv</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[uwc-studentsql.continuum.uw.edu\uwcbiddsql.msdb.fdgomez]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FADA0509-E78C-4974-A123-EC31320C23E7}"
+      DTS:ObjectName="uwc-studentsql.continuum.uw.edu\uwcbiddsql.msdb.fdgomez">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=uwc-studentsql.continuum.uw.edu\uwcbiddsql;User ID=fdgomez;Initial Catalog=msdb;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Gold_Debt SSIS ETL Process-{FADA0509-E78C-4974-A123-EC31320C23E7}uwc-studentsql.continuum.uw.edu\uwcbiddsql.msdb.fdgomez;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIiRhD8CkjEqMPYOH28MixQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADBm90unyXL9Lya/cuNiP0UQ8FS9wg50hfl6rFDIe7s9QAAAAAOgAAAAAIAACAAAABW1A5kUG5yMnI4UD8O3YROlcxyZ/HcoMJXqq+a6ym/xyAAAAASeOV9a3IcEulnT5NFcwK2ez1iMTVgtzbSHAVhMFoggkAAAABvxSHL4bMYSkS+IcYaTEh77PWldGuLTt05ioqUB4QoWoXdAW6mSluSUymnnYYyEBy8pSVEPW12UeFwqBaCDY03</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Add Back Foreign Keys"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{D50683BF-CC98-4544-81AB-0E71882AF934}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Add Back Foreign Keys">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Add Back Foreign Keys\Add Back Foreign Keys"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Add Back Foreign Keys After Filling Up Our Dimension and Fact Tables"
+          DTS:DTSID="{3DC1D0FF-96AA-4267-A05B-D00C5A998EBD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add Back Foreign Keys"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLAddForeignKeyConstraints;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create Dimension and Fact ETL Views"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{4154F764-CD40-45B8-B379-6327E2234769}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Dimension and Fact ETL Views">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Create Dimension and Fact ETL Views\Create DimCountries ETL View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vETLDimCountries View To Use For Inserting Data Into Our DimCountries Table"
+          DTS:DTSID="{3B59C553-DEE7-490B-AB22-CE8AEE1F82A3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DimCountries ETL View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLvETLDimCountries;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Dimension and Fact ETL Views\Create DimRegions ETL View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vETLDimRegions View To Use For Inserting Data Into Our DimRegions Table"
+          DTS:DTSID="{24E5756F-FD69-4758-97B5-79CE3F9D6A57}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create DimRegions ETL View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLvETLDimRegions;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Dimension and Fact ETL Views\Create FactCovid ETL View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vETLFactCovid View To Use For Inserting Data Into Our FactCovid Table"
+          DTS:DTSID="{22BC3742-8844-4CB1-BD88-D7C2FBA37CAD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create FactCovid ETL View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLvETLFactCovid;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Dimension and Fact ETL Views\Create FactDebt ETL View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vETLFactDebt View To Use For Inserting Data Into Our FactDebt Table"
+          DTS:DTSID="{73630EC7-DC9F-45E0-AC72-F6FDB04D7833}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create FactDebt ETL View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLvETLFactDebt;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create ETLLog Table &amp; ETLLogView"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{57712B62-9021-436D-B16A-B6A681D1A690}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create ETLLog Table &amp; ETLLogView">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our ETL Log Table for Admin Tasks"
+          DTS:DTSID="{528278EB-3210-4CCC-B21A-61F5AD37F0D2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create ETL Log Table"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLLogTable;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create ETL Log View For Our Power BI Report"
+          DTS:DTSID="{29AEBB22-9671-44C0-86E1-FFE11F2E347C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create ETL Log View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLLogView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create ETLLog Table &amp; ETLLogView.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{4C9A19E1-ADE2-44C4-9958-7D44BCBDB590}"
+          DTS:From="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log View" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Dimension &amp; Fact Tables Refresh"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{63B00A3C-3660-41E8-9D9C-6F553496530A}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Dimension &amp; Fact Tables Refresh">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh\Dim Countries Flush and Fill Stored Procedure"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fill Our DimCountries Table"
+          DTS:DTSID="{8B4E4A4A-4B5F-4A39-91A5-B94BFAAA4158}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dim Countries Flush and Fill Stored Procedure"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFillDimCountries;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh\Dim Dates Flush and Fill Stored Procedure"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fill Our DimDates Table"
+          DTS:DTSID="{0C4CDC40-5437-45AF-BEA6-145957194531}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dim Dates Flush and Fill Stored Procedure"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFillDimDates;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh\Dim Regions Flush and Fill Stored Procedure"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fill Our DimRegions Table"
+          DTS:DTSID="{C050061E-3922-4DA3-BD37-528C654690A8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dim Regions Flush and Fill Stored Procedure"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFillDimRegions;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh\Fact Covid Flush and Fill Stored Procedure"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fill Our FactCovid Table"
+          DTS:DTSID="{5DC5571D-2F6F-4F7C-B43F-E22A35601D6A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fact Covid Flush and Fill Stored Procedure"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFillFactCovid;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh\Fact Debt Flush and Fill Stored Procedure"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fill Our FactDebt Table"
+          DTS:DTSID="{4B0CC2F4-54C9-4E0B-BD01-A3EA70EB5612}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fact Debt Flush and Fill Stored Procedure"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFillFactDebt;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1F359F5F-9F66-431A-9E0A-0B02C494499D}"
+          DTS:From="Package\Dimension &amp; Fact Tables Refresh\Dim Dates Flush and Fill Stored Procedure"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Dimension &amp; Fact Tables Refresh\Dim Countries Flush and Fill Stored Procedure" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{B0705CE1-1F16-4BAE-ABF7-CEA7889053A1}"
+          DTS:From="Package\Dimension &amp; Fact Tables Refresh\Dim Countries Flush and Fill Stored Procedure"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Dimension &amp; Fact Tables Refresh\Dim Regions Flush and Fill Stored Procedure" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{7BD681A1-14D6-4B5F-821B-C7D035EEF86E}"
+          DTS:From="Package\Dimension &amp; Fact Tables Refresh\Dim Regions Flush and Fill Stored Procedure"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Dimension &amp; Fact Tables Refresh\Fact Covid Flush and Fill Stored Procedure" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{48C32482-14E2-4222-A6CC-465454095A9E}"
+          DTS:From="Package\Dimension &amp; Fact Tables Refresh\Fact Covid Flush and Fill Stored Procedure"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Dimension &amp; Fact Tables Refresh\Fact Debt Flush and Fill Stored Procedure" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Drop Foreign Keys &amp; Truncate Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{A966EE8A-5187-41DF-A01E-BE8B424B174F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop Foreign Keys &amp; Truncate Tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Drop Foreign Keys &amp; Truncate Tables\Drop Foreign Keys"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Drop Foreign Keys In Order To Truncate Our Tables And Proceed To Fill Them Up Again"
+          DTS:DTSID="{FBDF818E-8937-4476-89E3-88361DF62538}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Drop Foreign Keys"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLDropForeignKeyConstraints;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Drop Foreign Keys &amp; Truncate Tables\Truncate Tables"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Truncate Our Tables After Dropping Our Foreign Keys In Order To Proceed To Fill Up Our Dimension and Fact Tables With Up To Date Data"
+          DTS:DTSID="{6AA1A214-426B-44B3-9768-E0FC36C9E1CA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Tables"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLTruncateTables;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Drop Foreign Keys &amp; Truncate Tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{B32C796B-6143-4410-BF97-9B9DEE7423CF}"
+          DTS:From="Package\Drop Foreign Keys &amp; Truncate Tables\Drop Foreign Keys"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Drop Foreign Keys &amp; Truncate Tables\Truncate Tables" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Generate Views Refresh"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{251FAE5F-00EF-42B0-A0BB-D18C59EF7FAA}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Generate Views Refresh">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Generate Views Refresh\Create Or Alter vDimCountries View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vDimCountries View for Power BI"
+          DTS:DTSID="{FDDAB099-233A-4B69-A171-E802FE2F7584}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Or Alter vDimCountries View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLDimCountriesView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Generate Views Refresh\Create Or Alter vDimDates View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vDimDates View for Power BI"
+          DTS:DTSID="{A0864E33-7754-4FA4-B497-569BDE88B8CE}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Or Alter vDimDates View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLDimDatesView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Generate Views Refresh\Create Or Alter vDimRegions View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vDimRegion View For Power BI"
+          DTS:DTSID="{54061E21-CB20-4E0C-AD17-5EF26B644FD7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Or Alter vDimRegions View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLDimRegionsView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Generate Views Refresh\Create Or Alter vFactCovid View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vFactCovid View for Power BI"
+          DTS:DTSID="{DF1D810C-8423-41FC-87C0-5D6F45C2C7B9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Or Alter vFactCovid View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFactCovidView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Generate Views Refresh\Create Or alter vFactDebt View"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Our vFactDebt View for Power BI"
+          DTS:DTSID="{F6E346D6-5765-4817-B246-C8FE0F28A32F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Or alter vFactDebt View"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLFactDebtView;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Gold_Debt Database Creation"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{6D8DFE04-69D1-4536-A974-EE4A1169A90C}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Gold_Debt Database Creation">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Gold_Debt Database Creation\Gold_Debt Database Creation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="DROPS EXISTING GOLD_DEBT DATABASE AND CREATES DEBT_GOLD DATABASE"
+          DTS:DTSID="{6482D142-CBEC-433A-B09B-F205895DD6AA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Gold_Debt Database Creation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E78BBC48-2D55-4F01-8306-42AB3343756B}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLGoldDebtDatabaseCreation;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{9A3CE52B-9CEB-4FDB-BCEC-1F3EFD677B28}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Add Foreign Key Constraints To Dimension and Fact Tables"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Gold_Debt Add Foreign Key Constraints To Our Dimension and Fact Tables"
+          DTS:DTSID="{7EBB1D38-40BE-4ECC-A56A-968792325E95}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Gold_Debt Add Foreign Key Constraints To Dimension and Fact Tables"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLGoldDebtForeignKeyConstraints;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Dimension and Fact Tables Creation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Create Dimension and Fact Tables For Our Gold_Debt Database"
+          DTS:DTSID="{74B5EF2E-CF97-487A-96BA-BE540F517DA9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Gold_Debt Dimension and Fact Tables Creation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLGoldDebtDimensionAndFactTablesCreation;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{5AF270A0-0D6E-40DB-8210-98FB8DD8620F}"
+          DTS:From="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Dimension and Fact Tables Creation"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Add Foreign Key Constraints To Dimension and Fact Tables" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Gold_Debt Staging Tables Creation"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{A9D18233-2069-43CB-BA47-17A3034EA090}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Gold_Debt Staging Tables Creation">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Gold_Debt Staging Tables Creation\StagingBingCovid19DataRaw Staging Table Creation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="CREATION OF STAGING TABLE STAGINGBINGCOVID19DATARAW"
+          DTS:DTSID="{DAD28AB5-1E36-49EB-8A8D-AC101CB401A1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="StagingBingCovid19DataRaw Staging Table Creation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLStagingBingCovid19DataRaw;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Gold_Debt Staging Tables Creation\StagingDebtPennyRaw Staging Table Creation"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="CREATION OF STAGING TABLE STAGINGDEBTPENNYRAW"
+          DTS:DTSID="{5BB8FCD4-6B4E-4A77-8460-FB361496D348}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="StagingDebtPennyRaw Staging Table Creation"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLStagingDebtPennyRaw;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PRE SSIS RUN"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{2C2E490E-A414-450B-9EFE-5125A78DC480}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PRE SSIS RUN">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Raw Data Bulk Insert Into Staging Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{E958B694-A352-4ADD-AEBD-F743C21CF715}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Raw Data Bulk Insert Into Staging Tables">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Raw Data Bulk Insert Into Staging Tables\BULK INSERT Into Staging Table StagingBingCovid19DataRaw"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Perform BULK INSERT Into StagingBindCovid19DataRaw From CSV File"
+          DTS:DTSID="{FA107498-E089-4CE0-901B-FC6D12A96BA3}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="BULK INSERT Into Staging Table StagingBingCovid19DataRaw"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLImportBingCovid19DataRawToStagingTable;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Raw Data Bulk Insert Into Staging Tables\BULK INSERT Into Staging Table StagingDebtPennyRaw"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Perform BULK INSERT Into StagingDebtPennyRaw From CSV File"
+          DTS:DTSID="{D264E225-A70B-452F-BDB5-5E7DB6067687}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="BULK INSERT Into Staging Table StagingDebtPennyRaw"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_ETLImportDebtPennyRawToStagingTable;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Run Gold_Debt SQL Queries"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{2BDEB1C6-ADB1-41FF-9A94-09B0981C4DA0}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run Gold_Debt SQL Queries">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Run Gold_Debt SQL Queries\Run Gold_Debt SQL Queries"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Run ALL Gold_Debt SQL Scripts"
+          DTS:DTSID="{59DD9F7F-F60D-4B4A-BF0D-FEEE8159F16E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run Gold_Debt SQL Queries"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="--*************************************************************************--&#xA;-- Title: BIDD330A Final&#xA;-- Author: Felipe Gomez&#xA;-- Desc: This file creates our Gold_Data Database, Staging Tables, BULK INSERT INTO our Staging Tables, Dimension and Fact Tables &amp; our Foreign Key Constraints, Flush and Fill ETL process with SQL code&#xA;-- Change Log: When,Who,What&#xA;-- 2024-05-27,Felipe Gomez,Created File&#xA;-- TODO: 05/27/2024,Felipe Gomez,Updated code to include logging and transaction handling&#xA;---------------------------------&#xA;--PLEASE MAKE SURE TO ADD BOTH COVID19 AND DEBT PENNY CSV FILES DO YOUR C:\Data directory!!!!!!!!!!!!!!!!!!!&#xA;USE MASTER&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLGoldDebtDatabaseCreation AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'Gold_Debt')&#xA;&#x9;&#x9;ALTER DATABASE [Gold_Debt] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;&#xA;&#x9;&#x9;DROP DATABASE [Gold_Debt];&#xA;&#x9;&#x9;CREATE DATABASE [Gold_Debt]&#xA;&#x9;&#x9;ALTER DATABASE [Gold_Debt] SET MULTI_USER;&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating Our Database/DataWarehouse Gold_Debt'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLGoldDebtDatabaseCreation;&#xA;--GO&#xA;------------------------------------&#xA;--CREATE STAGING TABLES&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLStagingBingCovid19DataRaw AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;If (SELECT Object_ID('StagingBingCovid19DataRaw')) IS NOT NULL&#xA;&#x9;&#x9;DROP TABLE StagingBingCovid19DataRaw;&#xA;&#x9;&#x9;CREATE TABLE StagingBingCovid19DataRaw (&#xA;&#x9;&#x9;&#x9;[id] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[updated] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[confirmed] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[confirmed_change] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[deaths] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[deaths_change] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[recovered] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[recovered_change] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[latitude] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[longitude] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[iso2] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[iso3] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[country_region] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[admin_region_1] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[iso_subdivision] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[admin_region_2] NVARCHAR(MAX),&#xA;&#x9;&#x9;&#x9;[load_time] NVARCHAR(MAX)&#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating Staging Table StagingBingCovid19DataRaw for BULK INSERT'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLStagingBingCovid19DataRaw;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLStagingDebtPennyRaw AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;If (SELECT Object_ID('StagingDebtPennyRaw')) IS NOT NULL&#xA;&#x9;&#x9;DROP TABLE StagingDebtPennyRaw;&#xA;&#x9;&#x9;CREATE TABLE StagingDebtPennyRaw (&#xA;&#x9;&#x9;&#x9;[Record Date] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Debt Held by the Public] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Intragovernmental Holdings] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Total Public Debt Outstanding] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Source Line Number] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Fiscal Year] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Fiscal Quarter Number] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Calendar Year] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Calendar Quarter Number] NVARCHAR(200),&#xA;&#x9;&#x9;    [Calendar Month Number] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Calendar Day Number]NVARCHAR(200)&#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating Staging Table StagingDebtPennyRaw for BULK INSERT'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLStagingDebtPennyRaw;&#xA;--GO&#xA;&#xA;--------------------------------------------------------BULK INSERT RAW CSV FILES INTO OUR STAGING TABLES&#xA;&#xA;--USE [Gold_Debt]&#xA;--GO&#xA;&#xA;--CREATE OR ALTER PROCEDURE sp_ETLImportBingCovid19DataRawToStagingTable AS&#xA;--BEGIN&#xA;--&#x9;DECLARE @RC INT = 0;&#xA;--&#x9;BEGIN TRY&#xA;--&#x9;&#x9;BULK INSERT [StagingBingCovid19DataRaw]&#xA;--&#x9;&#x9;FROM 'C:\Data\bing_covid-19_data.csv' --'\\DESKTOP\Data\bing_covid-19_data.csv' --&#xA;--&#x9;&#x9;WITH (&#xA;--&#x9;&#x9;&#x9;DATAFILETYPE = 'char',&#xA;--&#x9;&#x9;&#x9;FORMAT = 'CSV',&#xA;--&#x9;&#x9;&#x9;FIELDTERMINATOR = ',',&#xA;--&#x9;&#x9;&#x9;ROWTERMINATOR = '0x0a',&#xA;--&#x9;&#x9;&#x9;FIRSTROW = 2,&#xA;--&#x9;&#x9;&#x9;MAXERRORS = 0&#xA;--&#x9;&#x9;);&#xA;--&#x9;&#x9;SET @RC = 1;&#xA;--&#x9;END TRY&#xA;--&#x9;BEGIN CATCH&#xA;--&#x9;&#x9;PRINT 'Error Importing COVID19 Raw Data to Staging Table'&#xA;--&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;--&#x9;&#x9;SET @RC = -1&#xA;--&#x9;END CATCH&#xA;--END&#xA;--GO&#xA;&#xA;----EXEC sp_ETLImportBingCovid19DataRawToStagingTable;&#xA;----GO&#xA;&#xA;--USE [Gold_Debt]&#xA;--GO&#xA;&#xA;--CREATE OR ALTER PROCEDURE sp_ETLImportDebtPennyRawToStagingTable AS&#xA;--BEGIN&#xA;--&#x9;DECLARE @RC INT = 0;&#xA;--&#x9;BEGIN TRY&#xA;--&#x9;&#x9;BULK INSERT [StagingDebtPennyRaw]&#xA;--&#x9;&#x9;FROM 'C:\Data\DebtPenny_20140426_20240425.csv'&#xA;--&#x9;&#x9;WITH (&#xA;--&#x9;&#x9;&#x9;DATAFILETYPE = 'char',&#xA;--&#x9;&#x9;&#x9;FORMAT = 'CSV',&#xA;--&#x9;&#x9;&#x9;FIELDTERMINATOR = ',',&#xA;--&#x9;&#x9;&#x9;ROWTERMINATOR = '0x0a',&#xA;--&#x9;&#x9;&#x9;FIRSTROW = 2,&#xA;--&#x9;&#x9;&#x9;MAXERRORS = 0&#xA;--&#x9;&#x9;);&#xA;--&#x9;&#x9;SET @RC = 1;&#xA;--&#x9;END TRY&#xA;--&#x9;BEGIN CATCH&#xA;--&#x9;&#x9;PRINT 'Error Importing Debt Penny Raw Data to Staging Table'&#xA;--&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;--&#x9;&#x9;SET @RC = -1&#xA;--&#x9;END CATCH&#xA;--END&#xA;--GO&#xA;&#xA;--EXEC sp_ETLImportDebtPennyRawToStagingTable;&#xA;--GO&#xA;&#xA;-------------------------------------------------------------------CREATE DIMENSION AND FACT TABLES (INCLUDING PRIMARY AND FOREGIN KEYS)&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLGoldDebtDimensionAndFactTablesCreation AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;/****** [dbo].[DimDates] ******/&#xA;&#x9;&#x9;DROP TABLE IF EXISTS [dbo].[DimDates]&#xA;&#x9;&#x9;CREATE TABLE [dbo].[DimDates] (&#xA;&#x9;&#x9;&#x9;[DateKey] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[FullDate] DATETIME NOT NULL,&#xA;&#x9;&#x9;&#x9;[FullDateName] NVARCHAR(200) NULL,&#xA;&#x9;&#x9;&#x9;[WeekID] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[MonthID] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[MonthName] NVARCHAR(200) NOT NULL,&#xA;&#x9;&#x9;&#x9;[Quarter] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[YearQuarter] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[YearID] INT NOT NULL,&#xA;&#x9;&#x9;&#x9;[YearName] NVARCHAR(200) NOT NULL,&#xA;&#x9;&#x9;&#x9;CONSTRAINT [PK_DimDates] PRIMARY KEY CLUSTERED&#xA;&#x9;&#x9;&#x9;([DateKey])&#xA;&#x9;&#x9;)&#xA;&#xA;&#x9;&#x9;DROP TABLE IF EXISTS [dbo].[DimCountries]&#xA;&#x9;&#x9;CREATE TABLE [dbo].[DimCountries] (&#xA;&#x9;&#x9;&#x9;[CountryKey] INT IDENTITY (1, 1) NOT NULL,&#xA;&#x9;&#x9;&#x9;[Country] NVARCHAR (200)&#xA;&#x9;&#x9;&#x9;CONSTRAINT [PK_DimCountries] PRIMARY KEY CLUSTERED&#xA;&#x9;&#x9;&#x9;([CountryKey])&#xA;&#x9;&#x9;)&#xA;&#xA;&#x9;&#x9;DROP TABLE IF EXISTS [dbo].[DimRegions]&#xA;&#x9;&#x9;CREATE TABLE [dbo].[DimRegions] (&#xA;&#x9;&#x9;&#x9;[RegionKey] INT IDENTITY (1, 1) NOT NULL,&#xA;&#x9;&#x9;&#x9;[Region] NVARCHAR (200)&#xA;&#x9;&#x9;&#x9;CONSTRAINT [PK_DimRegion] PRIMARY KEY CLUSTERED&#xA;&#x9;&#x9;&#x9;([RegionKey])&#xA;&#x9;&#x9;)&#xA;&#xA;&#x9;&#x9;DROP TABLE IF EXISTS [dbo].[FactCovid]&#xA;&#x9;&#x9;CREATE TABLE [dbo].[FactCovid] (&#xA;&#x9;&#x9;&#x9;[FactCovidKey] INT IDENTITY (1,1) NOT NULL, --future Surrogate Key&#xA;&#x9;&#x9;&#x9;[ID] INT,&#xA;&#x9;&#x9;&#x9;[Updated] DATE,&#xA;&#x9;&#x9;&#x9;[DateKey] INT,&#xA;&#x9;&#x9;&#x9;[Confirmed] INT,&#xA;&#x9;&#x9;&#x9;[Confirmed_Change] INT,&#xA;&#x9;&#x9;&#x9;[Deaths] INT,&#xA;&#x9;&#x9;&#x9;[Deaths_Change] INT,&#xA;&#x9;&#x9;&#x9;[Recovered] INT,&#xA;&#x9;&#x9;&#x9;[Recovered_Change] INT,&#xA;&#x9;&#x9;&#x9;[Latitude] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Longitude] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Iso2] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Iso3] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Country_Region] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[CountryKey] INT,&#xA;&#x9;&#x9;&#x9;[Admin_Region_1] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[RegionKey] INT NULL,&#xA;&#x9;&#x9;&#x9;[Iso_Subdivision] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Admin_Region_2] NVARCHAR(200),&#xA;&#x9;&#x9;&#x9;[Load_Time] datetime2,&#xA;&#x9;&#x9;&#x9;CONSTRAINT [PK_FactCovid] PRIMARY KEY CLUSTERED ([FactCovidKey], [ID], [DateKey], [CountryKey])&#xA;&#x9;&#x9;) ON [PRIMARY]&#xA;&#xA;&#x9;&#x9;DROP TABLE IF EXISTS [dbo].[FactDebt]&#xA;&#x9;&#x9;CREATE TABLE [dbo].[FactDebt] (&#xA;&#x9;&#x9;&#x9;[FactDebtKey] INT IDENTITY(1,1) NOT NULL,&#xA;&#x9;&#x9;&#x9;[Record_Date] DATE NULL,&#xA;&#x9;&#x9;&#x9;[DateKey] INT,&#xA;&#x9;&#x9;&#x9;[Public_Debt] FLOAT NULL,&#xA;&#x9;&#x9;&#x9;[Intragovernmental_Holdings] FLOAT NULL,&#xA;&#x9;&#x9;&#x9;[Total_Public_Debt_Outstanding] FLOAT NULL,&#xA;&#x9;&#x9;&#x9;[Source_Line_Number] INT NULL,&#xA;&#x9;&#x9;&#x9;[Fiscal_Year] INT NULL,&#xA;&#x9;&#x9;&#x9;[Fiscal_Quarter_Number] INT NULL,&#xA;&#x9;&#x9;&#x9;[Calendar_Year] INT NULL,&#xA;&#x9;&#x9;&#x9;[Calendar_Quarter_Number] INT NULL,&#xA;&#x9;&#x9;&#x9;[Calendar_Month_Number] INT NULL,&#xA;&#x9;&#x9;&#x9;[Calendar_Day_Number] INT NULL,&#xA;&#x9;&#x9;&#x9;CONSTRAINT [PK_FactDebt] PRIMARY KEY CLUSTERED ([FactDebtKey], [DateKey])&#xA;&#x9;&#x9;) ON [PRIMARY]&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating Dimension and Fact Tables'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLGoldDebtDimensionAndFactTablesCreation;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLGoldDebtForeignKeyConstraints AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimDates] &#xA;&#x9;&#x9;&#x9;FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDates] ([DateKey])&#xA;&#x9;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimCountries] &#xA;&#x9;&#x9;&#x9;FOREIGN KEY ([CountryKey]) REFERENCES [dbo].[DimCountries] ([CountryKey])&#xA;&#x9;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimRegions] &#xA;&#x9;&#x9;&#x9;FOREIGN KEY ([RegionKey]) REFERENCES [dbo].[DimRegions] ([RegionKey])&#xA;&#x9;&#x9;ALTER TABLE [dbo].[FactDebt] ADD CONSTRAINT [FK_FactDebt_DimDates] &#xA;&#x9;&#x9;&#x9;FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDates] ([DateKey])&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating Foreign Key Constraints'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLGoldDebtForeignKeyConstraints;&#xA;--GO&#xA;&#xA;-------------------------------------------------------PERFORM OUR ETL FLUSH AND FILL PROCESS&#xA;&#xA;-- 1) CREATE OUR ETL TABLE, VIEW AND INSERT STORED PROCEDURE&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLLogTable AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;IF NOT Exists(SELECT * FROM Sys.tables WHERE [name] = 'ETLLog')&#xA;&#x9;&#x9;  CREATE -- Drop&#xA;&#x9;&#x9;  TABLE ETLLog&#xA;&#x9;&#x9;  (ETLLogID INT IDENTITY PRIMARY KEY&#xA;&#x9;&#x9;  ,ETLDateAndTime DATETIME DEFAULT GETDATE()&#xA;&#x9;&#x9;  ,ETLAction NVARCHAR(100)&#xA;&#x9;&#x9;  ,ETLLogMessage NVARCHAR(2000)&#xA;&#x9;&#x9;  );&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Log Table'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLLogTable;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLLogView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW vETLLog&#xA;&#x9;&#x9;AS&#xA;&#x9;&#x9;  SELECT&#xA;&#x9;&#x9;   ETLLogID&#xA;&#x9;&#x9;  ,ETLDate = Format(ETLDateAndTime, ''D'', ''en-us'')&#xA;&#x9;&#x9;  ,ETLTime = Format(Cast(ETLDateAndTime as datetime2), ''HH:mm'', ''en-us'')&#xA;&#x9;&#x9;  ,ETLAction&#xA;&#x9;&#x9;  ,ETLLogMessage&#xA;&#x9;&#x9;  FROM ETLLog');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Log View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLLogView;&#xA;--GO&#xA;&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLInsertETLLog (@ETLAction NVARCHAR(100), @ETLLogMessage NVARCHAR(2000)) AS&#xA;BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY&#xA;    BEGIN TRAN;&#xA;      INSERT INTO [ETLLog] (ETLAction, ETLLogMessage)&#xA;      Values&#xA;       (@ETLAction,@ETLLogMessage)&#xA;    Commit Tran;&#xA;    Set @RC = 1;&#xA;  End Try&#xA;  Begin Catch&#xA;    If @@TRANCOUNT &gt; 0 Rollback Tran;&#xA;    Set @RC = -1;&#xA;  End Catch&#xA;  Return @RC;&#xA;End&#xA;GO -- If you don't put a go here the test code will be included in the Sproc body!&#xA;&#xA;-- 2) CREATE OUR DROP FOREIGN KEY CONSTRAINTS STORED PROCEDURE&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLDropForeignKeyConstraints AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#xA;    -- ETL Processing Code --&#xA;    ALTER TABLE [dbo].[FactCovid] &#xA;     DROP CONSTRAINT [FK_FactCovid_DimDates] &#xA;&#xA;    ALTER TABLE [dbo].[FactCovid] &#xA;     DROP CONSTRAINT [FK_FactCovid_DimCountries] &#xA;&#xA;    ALTER TABLE [dbo].[FactCovid] &#xA;     DROP CONSTRAINT [FK_FactCovid_DimRegions] &#xA;&#xA;    ALTER TABLE [dbo].[FactDebt] &#xA;     DROP CONSTRAINT [FK_FactDebt_DimDates] &#xA;&#xA;    -- Optional: Unlike the other tables DimDates does not change often --&#xA;    --Alter Table [dbo].[FactSalesOrders] &#xA;    -- Drop Constraint [FK_FactSalesOrders_DimDates]&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLDropForeignKeyConstraints'&#xA;&#x9;       ,@ETLLogMessage = 'Foreign Keys dropped';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     DECLARE @ErrorMessage nvarchar(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLDropForeignKeyConstraints'&#xA;&#x9;     ,@ETLLogMessage = 'Foreign Keys cannot be dropped (They may be missing or misnamed)';&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLDropForeignKeyConstraints;&#xA;--GO&#xA;&#xA;-- 3) CREATE OUR TRUNCATE TABLES STORED PROCEDURE&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLTruncateTables AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;    -- ETL Processing Code --&#xA;    TRUNCATE TABLE [Gold_Debt].dbo.DimCountries;&#xA;    TRUNCATE TABLE [Gold_Debt].dbo.DimRegions;&#xA;    TRUNCATE TABLE [Gold_Debt].dbo.FactCovid;   &#xA;&#x9;TRUNCATE TABLE [Gold_Debt].dbo.FactDebt;   &#xA;    -- Optional: Unlike the other tables DimDates does not change often --&#xA;    TRUNCATE TABLE [Gold_Debt].dbo.DimDates; &#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLTruncateTables'&#xA;&#x9;       ,@ETLLogMessage = 'Tables data removed';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLTruncateTables'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLTruncateTables;&#xA;--GO&#xA;&#xA;-- 4) CREATE OUR STORED PROCEDURES TO FILL IN OUR DIMENSIONS&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFillDimDates AS&#xA;BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY&#xA;&#xA;    -- ETL Processing Code --&#xA;      DECLARE @StartDate DATETIME = '01/01/2014'&#xA;      DECLARE @EndDate DATETIME = '12/31/2024' &#xA;      DECLARE @DateInProcess DATETIME  = @StartDate&#xA;      -- Loop through the dates until you reach the end date&#xA;      BEGIN TRAN&#xA;      WHILE @DateInProcess &lt;= @EndDate&#xA;       BEGIN&#xA;       -- Add a row Into the date dimension table for this date&#xA;       INSERT INTO DimDates &#xA;       ( [DateKey],[FullDate],[FullDateName],[WeekID],[MonthID],[MonthName],[Quarter],[YearQuarter],[YearID],[YearName])&#xA;       VALUES ( &#xA;         Cast(Convert(NVARCHAR(50), @DateInProcess, 112) AS INT) -- [DateKey]&#xA;        ,@DateInProcess -- [FullDate]&#xA;        ,DateName(WEEKDAY, @DateInProcess) + ', ' + Convert(NVARCHAR(50), @DateInProcess, 110) -- [FullDateName]&#xA;&#x9;&#x9;,CAST(DATEPART(ISO_WEEK, @DateInProcess) AS INT) --[WeekID]&#xA;        ,Cast(Left(Convert(NVARCHAR(50), @DateInProcess, 112), 6) AS INT)  -- [MonthID]&#xA;        ,DateName(month, @DateInProcess) + ' - ' + DateName(YYYY,@DateInProcess) -- [MonthName]&#xA;&#x9;&#x9;,DATEPART(QUARTER,@DateInProcess) -- [Quarter]&#xA;&#x9;&#x9;,CAST(CONCAT(YEAR(@DateInProcess), DATEPART(QUARTER,@DateInProcess)) AS INT) -- [YearQuarter]&#xA;        ,Year(@DateInProcess) -- [YearID] &#xA;        ,Cast(Year(@DateInProcess ) AS NVARCHAR(50)) -- [YearName] &#xA;        )  &#xA;       -- Add a day and loop again&#xA;       SET @DateInProcess = DateAdd(d, 1, @DateInProcess)&#xA;       END&#xA;&#x9;   COMMIT TRAN&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLFillDimDates'&#xA;&#x9;       ,@ETLLogMessage = 'DimDates filled';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     IF @@TRANCOUNT &gt; 0 ROLLBACK TRAN;&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog&#xA;&#x9;      @ETLAction = 'sp_ETLFillDimDates'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFillDimDates;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLvETLDimCountries AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vETLDimCountries]&#xA;&#x9;&#x9;&#x9; /* Desc: Extracts and transforms data for DimCountries*/&#xA;&#x9;&#x9;     AS&#xA;&#x9;&#x9;&#x9; SELECT DISTINCT [Country_Region] AS [Country]&#xA;&#x9;&#x9;&#x9; FROM [Gold_Debt].[dbo].[bing_covid-19_data_Raw] [C19]');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL DimCountries View For Inserting Data Into Our DimCountries Table'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLvETLDimCountries;&#xA;--GO&#xA;&#xA;--NO LONGER NEEDED BECAUSE WE CREATE A STORED PROCEDURE TO CREATE OR ALTER THE VIEW FOR vETLDimCountries!!!!!!!!!!!!!!!!!&#xA;--CREATE OR ALTER VIEW vETLDimCountries&#xA;--/* Desc: Extracts and transforms data for DimCountries&#xA;--*/&#xA;--AS SELECT DISTINCT [Country_Region] AS [Country] FROM [Gold_Debt].[dbo].[StagingBingCovid19DataRaw] [C19]&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFillDimCountries AS&#xA;BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY&#xA;&#xA;    -- ETL Processing Code --&#xA;    IF ((SELECT Count(*) FROM DimCountries) = 0)&#xA;     BEGIN TRAN&#xA;      INSERT INTO [Gold_Debt].dbo.DimCountries&#xA;      ([Country]&#xA;      )&#xA;      SELECT [Country]&#xA;      FROM vETLDimCountries&#xA;    COMMIT TRAN&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLFillDimCountries'&#xA;&#x9;       ,@ETLLogMessage = 'DimCountries filled';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     IF @@TRANCOUNT &gt; 0 ROLLBACK TRAN;&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLFillDimCountries'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFillDimCountries;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLvETLDimRegions AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vETLDimRegions]&#xA;&#x9;&#x9;&#x9; /* Desc: Extracts and transforms data for DimRegions*/&#xA;&#x9;&#x9;     AS&#xA;&#x9;&#x9;&#x9; SELECT DISTINCT [Admin_Region_1] AS [Region]&#xA;&#x9;&#x9;&#x9; FROM [Gold_Debt].[dbo].[bing_covid-19_data_Raw] [C19]');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL DimRegions View For Inserting Data Into Our DimRegions Table'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLvETLDimRegions;&#xA;--GO&#xA;&#xA;--NO LONGER NEEDED BECAUSE WE CREATE A STORED PROCEDURE TO CREATE OR ALTER THE VIEW FOR vETLDimRegions!!!!!!!!!!!!!!!!!&#xA;--CREATE OR ALTER VIEW vETLDimRegions&#xA;--/* Desc: Extracts and transforms data for DimRegions&#xA;--*/&#xA;--AS SELECT DISTINCT [Admin_Region_1] AS [Region] FROM [Gold_Debt].[dbo].[StagingBingCovid19DataRaw] [C19]&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFillDimRegions AS&#xA;BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY&#xA;&#xA;    -- ETL Processing Code --&#xA;    IF ((SELECT COUNT(*) FROM DimRegions) = 0)&#xA;     BEGIN TRAN&#xA;      INSERT INTO [Gold_Debt].dbo.DimRegions&#xA;      ([Region]&#xA;      )&#xA;      SELECT [Region]&#xA;      FROM vETLDimRegions&#xA;    COMMIT TRAN&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLFillDimRegions'&#xA;&#x9;       ,@ETLLogMessage = 'DimRegions filled';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     IF @@TRANCOUNT &gt; 0 ROLLBACK TRAN;&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLFillDimRegions'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFillDimRegions;&#xA;--GO&#xA;&#xA;-- 5) CREATE OUR STORED PROCEDURES TO FILL IN OUR FACTS&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLvETLFactCovid AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vETLFactCovid]&#xA;&#x9;&#x9;&#x9; /* Desc: Extracts and transforms data for FactCovid*/&#xA;&#x9;&#x9;     AS&#xA;&#x9;&#x9;&#x9;  SELECT&#xA;&#x9;&#x9;&#x9;&#x9;   --[FactCovidKey]&#xA;&#x9;&#x9;&#x9;&#x9;   [ID] = CAST([ID] AS INT)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Updated] = CAST([Updated] AS DATE)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[DateKey] = [D].[DateKey]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Confirmed] = CAST([confirmed] AS INT)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Confirmed_Change] = CAST([confirmed_change] AS INT)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Deaths]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Deaths_Change]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Recovered]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Recovered_Change]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Latitude]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Longitude]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Iso2]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Iso3]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Country_Region]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[CountryKey] = [C].[CountryKey]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Admin_Region_1]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[RegionKey] = [R].[RegionKey]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Iso_Subdivision]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Admin_Region_2]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Load_Time] = TRY_CONVERT(datetime2(7), [load_time])&#xA;&#x9;&#x9;&#x9;  FROM [Gold_Debt].[dbo].[bing_covid-19_data_Raw] [C19]&#xA;&#x9;&#x9;&#x9;  LEFT JOIN [Gold_Debt].[dbo].[DimCountries] [C]&#xA;&#x9;&#x9;&#x9;   ON [C19].[Country_Region] = [C].[Country]&#xA;&#x9;&#x9;&#x9;  LEFT JOIN [Gold_Debt].[dbo].[DimRegions] [R]&#xA;&#x9;&#x9;&#x9;   ON [C19].[Admin_Region_1] = [R].[Region]&#xA;&#x9;&#x9;&#x9;  LEFT JOIN [Gold_Debt].[dbo].[DimDates] [D]&#xA;&#x9;&#x9;&#x9;   ON CAST([C19].[Updated] AS DATE) = CAST([D].[FullDate] AS DATE)');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL FactCovid View For Inserting Data Into Our FactCovid Table'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLvETLFactCovid;&#xA;--GO&#xA;&#xA;--NO LONGER NEEDED BECAUSE WE CREATE A STORED PROCEDURE TO CREATE OR ALTER THE VIEW FOR vETLFactCovid!!!!!!!!!!!!!!!!!&#xA;--CREATE OR ALTER VIEW vETLFactCovid&#xA;--/* Desc: Extracts and transforms data for FactCovid&#xA;--*/&#xA;--AS&#xA;--  SELECT&#xA;--       --[FactCovidKey]&#xA;--       [ID],[Updated],[CovidDateKey] = [D].[DateKey],[Confirmed],[Confirmed_Change],[Deaths],[Deaths_Change],[Recovered],[Recovered_Change],[Latitude] ,[Longitude],[Iso2],[Iso3]&#xA;--      ,[Country_Region],[CountryKey] = [C].[CountryKey],[Admin_Region_1],[RegionKey] = [R].[RegionKey],[Iso_Subdivision],[Admin_Region_2],[Load_Time]&#xA;--  FROM [Gold_Debt].[dbo].[StagingBingCovid19DataRaw] [C19]&#xA;--  LEFT JOIN [Gold_Debt].[dbo].[DimCountries] [C] ON [C19].[Country_Region] = [C].[Country]&#xA;--  LEFT JOIN [Gold_Debt].[dbo].[DimRegions] [R] ON [C19].[Admin_Region_1] = [R].[Region]&#xA;--  LEFT JOIN [Gold_Debt].[dbo].[DimDates] [D] ON CAST([C19].[Updated] AS DATE) = CAST([D].[FullDate] AS DATE)&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFillFactCovid&#xA;/* Desc: Inserts data Into FactCovid using the vETLFactCovid view&#xA;*/&#xA;AS&#xA; BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY &#xA;&#xA;    -- ETL Processing Code --&#xA;    IF ((SELECT COUNT(*) FROM [Gold_Debt].[dbo].[FactCovid]) = 0)&#xA;     BEGIN TRAN&#xA;      INSERT INTO [Gold_Debt].[dbo].[FactCovid]&#xA;      ([ID]&#xA;      ,[Updated]&#xA;      ,[DateKey]&#xA;      ,[Confirmed]&#xA;      ,[Confirmed_Change]&#xA;      ,[Deaths]&#xA;      ,[Deaths_Change]&#xA;      ,[Recovered]&#xA;      ,[Recovered_Change]&#xA;      ,[Latitude]&#xA;      ,[Longitude]&#xA;      ,[Iso2]&#xA;      ,[Iso3]&#xA;      ,[Country_Region]&#xA;      ,[CountryKey]&#xA;      ,[Admin_Region_1]&#xA;      ,[RegionKey]&#xA;      ,[Iso_Subdivision]&#xA;      ,[Admin_Region_2]&#xA;      ,[Load_Time]&#xA;      )&#xA;      SELECT&#xA;       [ID]&#xA;      ,[Updated]&#xA;      ,[DateKey]&#xA;      ,[Confirmed]&#xA;      ,[Confirmed_Change]&#xA;      ,[Deaths]&#xA;      ,[Deaths_Change]&#xA;      ,[Recovered]&#xA;      ,[Recovered_Change]&#xA;      ,[Latitude]&#xA;      ,[Longitude]&#xA;      ,[Iso2]&#xA;      ,[Iso3]&#xA;      ,[Country_Region]&#xA;      ,[CountryKey]&#xA;      ,[Admin_Region_1]&#xA;      ,[RegionKey]&#xA;      ,[Iso_Subdivision]&#xA;      ,[Admin_Region_2]&#xA;      ,[Load_Time]&#xA;      FROM [dbo].[vETLFactCovid]&#xA;    COMMIT TRAN&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLFillFactCovid'&#xA;&#x9;       ,@ETLLogMessage = 'FactCovid filled';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     IF @@TRANCOUNT &gt; 0 ROLLBACK TRAN;&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLFillFactCovid'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFillFactCovid;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLvETLFactDebt AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;--CAST(LEFT(TRIM([Calendar Day Number]), 2) AS char(2))&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vETLFactDebt]&#xA;&#x9;&#x9;&#x9; /* Desc: Extracts and transforms data for FactDebt*/&#xA;&#x9;&#x9;     AS&#xA;&#x9;&#x9;&#x9;  SELECT&#xA;&#x9;&#x9;&#x9;&#x9;   --[FactDebtKey]&#xA;&#x9;&#x9;&#x9;&#x9;   [RecordDate] = [Record_Date]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[DateKey] = [D].[DateKey]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Public_Debt] = CAST([Debt_Held_by_the_Public] AS money)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Intragovernmental_Holdings] = CAST([Intragovernmental_Holdings] AS money)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Total_Public_Debt_Outstanding] = CAST([Total_Public_Debt_Outstanding] AS money)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Source_Line_Number] = [Source_Line_Number]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Fiscal_Year] = [Fiscal_Year]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Fiscal_Quarter_Number] = [Fiscal_Quarter_Number]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Calendar_Year] = [Calendar_Year]&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Calendar_Quarter_Number] = CAST([Calendar_Quarter_Number] AS INT)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Calendar_Month_Number] = CAST([Calendar_Month_Number] AS INT)&#xA;&#x9;&#x9;&#x9;&#x9;  ,[Calendary_Day_Number] = CAST(TRIM(REPLACE([Calendar_Day_Number], CHAR(13), '''')) AS INT)&#xA;&#x9;&#x9;&#x9;  FROM [Gold_Debt].[dbo].[DebtPenny_Raw] [DPR]&#xA;&#x9;&#x9;&#x9;  LEFT JOIN [Gold_Debt].[dbo].[DimDates] [D]&#xA;&#x9;&#x9;&#x9;   ON CAST([DPR].[Record_Date] AS DATE) = CAST([D].[FullDate] AS DATE)');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL FactDebt View For Inserting Data Into Our FactDebt Table'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLvETLFactDebt;&#xA;--GO&#xA;&#xA;--NO LONGER NEEDED BECAUSE WE CREATE A STORED PROCEDURE TO CREATE OR ALTER THE VIEW FOR vETLFactDebt!!!!!!!!!!!!!!!!!&#xA;--CREATE OR ALTER VIEW vETLFactDebt&#xA;--/* Desc: Extracts and transforms data for FactCovid&#xA;--*/&#xA;--AS&#xA;--  SELECT&#xA;--       --[FactDebtKey]&#xA;--&#x9;   [RecordDate] = [Record Date],[DebtDateKey] = [D].[DateKey],[Public_Debt] = [Debt Held by the Public],[Intragovernmental_Holdings] = [Intragovernmental Holdings],[Total_Public_Debt_Outstanding] = [Total Public Debt Outstanding],[Source_Line_Number] = [Source Line Number],[Fiscal_Year] = [Fiscal Year]&#xA;--      ,[Fiscal_Quarter_Number] = [Fiscal Quarter Number],[Calendar_Year] = [Calendar Year],[Calendar_Quarter_Number] = [Calendar Quarter Number],[Calendar_Month_Number] = [Calendar Month Number],[Calendary_Day_Number] = [Calendar Day Number]&#xA;--  FROM [Gold_Debt].[dbo].[StagingDebtPennyRaw] [DPR]&#xA;--  LEFT JOIN [Gold_Debt].[dbo].[DimDates] [D] ON CAST([DPR].[Record Date] AS DATE) = CAST([D].[FullDate] AS DATE)&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFillFactDebt&#xA;/* Desc: Inserts data Into FactCovid using the vETLFactCovid view&#xA;*/&#xA;AS&#xA; BEGIN&#xA;  DECLARE @RC INT = 0;&#xA;  BEGIN TRY &#xA;&#xA;    -- ETL Processing Code --&#xA;    IF ((SELECT COUNT(*) FROM FactDebt) = 0)&#xA;     BEGIN TRAN&#xA;      INSERT INTO [Gold_Debt].[dbo].[FactDebt]&#xA;      ([Record_Date]&#xA;      ,[DateKey]&#xA;      ,[Public_Debt]&#xA;      ,[Intragovernmental_Holdings]&#xA;      ,[Total_Public_Debt_Outstanding]&#xA;      ,[Source_Line_Number]&#xA;      ,[Fiscal_Year]&#xA;      ,[Fiscal_Quarter_Number]&#xA;      ,[Calendar_Year]&#xA;      ,[Calendar_Quarter_Number]&#xA;      ,[Calendar_Month_Number]&#xA;      ,[Calendar_Day_Number]&#xA;      )&#xA;      SELECT&#xA;&#x9;   [RecordDate]&#xA;&#x9;  ,[DateKey]&#xA;      ,[Public_Debt]&#xA;      ,[Intragovernmental_Holdings]&#xA;      ,[Total_Public_Debt_Outstanding]&#xA;      ,[Source_Line_Number]&#xA;      ,[Fiscal_Year]&#xA;      ,[Fiscal_Quarter_Number]&#xA;      ,[Calendar_Year]&#xA;      ,[Calendar_Quarter_Number]&#xA;      ,[Calendar_Month_Number]&#xA;      ,[Calendary_Day_Number]&#xA;      FROM vETLFactDebt&#xA;    COMMIT TRAN&#xA;&#xA;    EXEC sp_ETLInsertETLLog&#xA;&#x9;        @ETLAction = 'sp_ETLFillFactDebt'&#xA;&#x9;       ,@ETLLogMessage = 'FactDebt filled';&#xA;    SET @RC = +1&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;     IF @@TRANCOUNT &gt; 0 ROLLBACK TRAN;&#xA;     DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;&#x9; EXEC sp_ETLInsertETLLog &#xA;&#x9;      @ETLAction = 'sp_ETLFillFactDebt'&#xA;&#x9;     ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1&#xA;  END CATCH&#xA;  RETURN @RC;&#xA; END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFillFactDebt;&#xA;--GO&#xA;&#xA;-- 6) Add Back Foreign Keys&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLAddForeignKeyConstraints&#xA;/* Desc: This Sproc Replaces the Foreign Keys Constraints.&#xA;*/&#xA;AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 1;&#xA;&#x9;DECLARE @Message NVARCHAR(1000);&#xA;  BEGIN TRY&#xA;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimDates] &#xA;&#x9;&#x9;FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDates] ([DateKey])&#xA;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimCountries] &#xA;&#x9;&#x9;FOREIGN KEY ([CountryKey]) REFERENCES [dbo].[DimCountries] ([CountryKey])&#xA;&#x9;ALTER TABLE [dbo].[FactCovid] ADD CONSTRAINT [FK_FactCovid_DimRegions] &#xA;&#x9;&#x9;FOREIGN KEY ([RegionKey]) REFERENCES [dbo].[DimRegions] ([RegionKey])&#xA;&#x9;ALTER TABLE [dbo].[FactDebt] ADD CONSTRAINT [FK_FactDebt_DimDates] &#xA;&#x9;&#x9;FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDates] ([DateKey])&#xA;&#x9;SET @Message = 'Foreign Keys replaced on all tables';&#xA;&#x9;EXEC sp_ETLInsertETLLog&#xA; &#x9;       @ETLAction = 'sp_ETLAddForeignKeyConstraints'&#xA; &#x9;      ,@ETLLogMessage = @Message;&#xA;    SET @RC = 1;&#xA;  END TRY&#xA;  BEGIN CATCH&#xA;    IF @@TRANCOUNT &gt; 0 ROLLBACK;&#xA;    DECLARE @ErrorMessage NVARCHAR(1000) = Error_Message();&#xA;    EXEC sp_ETLInsertETLLog &#xA;         @ETLAction = 'sp_ETLAddForeignKeyConstraints'&#xA;        ,@ETLLogMessage = @ErrorMessage;&#xA;    SET @RC = -1;&#xA;  END CATCH&#xA;  RETURN @RC;&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLAddForeignKeyConstraints;&#xA;--GO&#xA;&#xA;--********************************************************************--&#xA;-- D) Review the results of this script&#xA;--********************************************************************--&#xA;--go&#xA;--Declare @Status int;&#xA;--Exec @Status = sp_ETLDropForeignKeyConstraints;&#xA;--Select [Object] = 'pETLDropForeignKeyConstraints', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLTruncateTables;&#xA;--Select [Object] = 'pETLTruncateTables', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLFillDimDates;&#xA;--Select [Object] = 'pETLFillDimDates', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLFillDimCountries;&#xA;--Select [Object] = 'pETLFillDimProducts', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLFillDimRegions;&#xA;--Select [Object] = 'pETLFillDimCustomers', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLFillFactCovid;&#xA;--Select [Object] = 'pETLFillFactOrders', [Status] = @Status;&#xA;&#xA;--Exec @Status = sp_ETLAddForeignKeyConstraints;&#xA;--Select [Object] = 'pETLAddForeignKeyConstraints', [Status] = @Status;&#xA;&#xA;--go&#xA;--Select [DimDates] = Count(*) From [dbo].[DimDates];&#xA;--Select [DimCountries] = Count(*) From [dbo].[DimCountrires];&#xA;--Select [DimRegions] = Count(*) From [dbo].[DimRegions];&#xA;--Select [FactCovid] = Count(*) From [dbo].[FactCovid];&#xA;--Select [FactDebt] = Count(*) From [dbo].[FactDebt];&#xA;--Select * From vETLLog;&#xA;----Delete From ETLLog;&#xA;&#xA;-------------------------------------------------&#xA;------CREATE FINAL VIEWS FOR POWER BI------------&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLDimDatesView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vDimDates]&#xA;&#x9;&#x9;      AS&#xA;&#x9;&#x9;      SELECT *&#xA;&#x9;&#x9;      FROM [Gold_Debt].[dbo].[DimDates] WITH (NOLOCK)&#xA;&#x9;&#x9;&#x9;  ORDER BY [FullDate] ASC&#xA;&#x9;&#x9;&#x9;  OFFSET 0 ROWS');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Final DimDates View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLDimDatesView;&#xA;--GO&#xA;&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLDimCountriesView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vDimCountries]&#xA;&#x9;&#x9;      AS&#xA;&#x9;&#x9;      SELECT *&#xA;&#x9;&#x9;      FROM [Gold_Debt].[dbo].[DimCountries] WITH (NOLOCK)');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Final DimCountries View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLDimCountriesView;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLDimRegionsView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vDimRegions]&#xA;&#x9;&#x9;      AS&#xA;&#x9;&#x9;      SELECT *&#xA;&#x9;&#x9;      FROM [Gold_Debt].[dbo].[DimRegions] WITH (NOLOCK)');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Final DimRegions View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLDimRegionsView;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFactCovidView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vFactCovid]&#xA;&#x9;&#x9;      AS&#xA;&#x9;&#x9;      SELECT *&#xA;&#x9;&#x9;      FROM [Gold_Debt].[dbo].[FactCovid] WITH (NOLOCK)&#xA;&#x9;&#x9;&#x9;  ORDER BY [Updated] ASC&#xA;&#x9;&#x9;&#x9;  OFFSET 0 ROWS');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Final FactCovid View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFactCovidView;&#xA;--GO&#xA;&#xA;USE [Gold_Debt]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_ETLFactDebtView AS&#xA;BEGIN&#xA;&#x9;DECLARE @RC INT = 0;&#xA;&#x9;BEGIN TRY&#xA;&#x9;&#x9;EXEC('CREATE OR ALTER VIEW [dbo].[vFactDebt]&#xA;&#x9;&#x9;      AS&#xA;&#x9;&#x9;      SELECT *&#xA;&#x9;&#x9;      FROM [Gold_Debt].[dbo].[FactDebt] WITH (NOLOCK)&#xA;&#x9;&#x9;&#x9;  ORDER BY [Record_Date] ASC&#xA;&#x9;&#x9;&#x9;  OFFSET 0 ROWS');&#xA;&#x9;&#x9;SET @RC = 1;&#xA;&#x9;END TRY&#xA;&#x9;BEGIN CATCH&#xA;&#x9;&#x9;PRINT 'Error Creating ETL Final FactDebt View For Our Power BI Report'&#xA;&#x9;&#x9;PRINT ERROR_MESSAGE()&#xA;&#x9;&#x9;SET @RC = -1&#xA;&#x9;END CATCH&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_ETLFactDebtView;&#xA;--GO&#xA;&#xA;--WE ARE SETTING UP DAILY SCHEDULED REFRESHES USING SQL SERVER AGENT! --THIS CODE IS NOT COPIED IN THE FIRST SEQUENCE CONTAINERS THAT RUNS CODE. WE RUN THIS AS A SEPARATE SQL SCRIPT IN THE FIRST AND THIRD SEQUENCE CONTAINER AS WELL AS THE LAST SEQUENCE CONTAINER &quot;SQL SERVER AGENT SCHEDULE REFRESH &amp; NEXT STEPS&quot;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Gold_Debt SQL Queries\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:DTSID="{7E8076BF-6791-4136-9833-B3D1AD2BB096}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FADA0509-E78C-4974-A123-EC31320C23E7}"
+              SQLTask:SqlStatementSource="--WE ARE SETTING UP DAILY SCHEDULED REFRESHES USING SQL SERVER AGENT!&#xA;-------------------------------------------------------------------------------------------------------&#xA;--SQL SERVER AGENT SCHEDULED REFRESH FOR LOCAL INSTANCE&#xA;--DEPENDING ON WHICH SERVER YOU ARE ON, YOU WILL HAVE TO COMMENT ON AND OFF THE SQL SEVER AGENT BLOCKS OF CODE.&#xA;&#xA;&#xA;USE [msdb]&#xA;GO&#xA;--USE [Gold_Debt]&#xA;--GO &#xA;&#xA;--DECLARE @jobID1 Binary(16)&#xA;--SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;--IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_Gold_Debt_SQLServerAgentDailyRefresh AS&#xA;BEGIN&#xA;/****** Object:  Job [Gold_Debt Daily Refresh]    Script Date: 5/27/2024 3:48:22 PM ******/&#xA;BEGIN TRANSACTION&#xA;DECLARE @ReturnCode INT&#xA;SELECT @ReturnCode = 0&#xA;DECLARE @jobID1 Binary(16)&#xA;SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;&#xA;/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 5/27/2024 3:48:23 PM ******/&#xA;IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)&#xA;BEGIN&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;&#xA;END&#xA;&#xA;DECLARE @jobId BINARY(16)&#xA;EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Gold_Debt Daily Refresh', &#xA;&#x9;&#x9;@enabled=1, &#xA;&#x9;&#x9;@notify_level_eventlog=0, &#xA;&#x9;&#x9;@notify_level_email=0, &#xA;&#x9;&#x9;@notify_level_netsend=0, &#xA;&#x9;&#x9;@notify_level_page=0, &#xA;&#x9;&#x9;@delete_level=0, &#xA;&#x9;&#x9;@description=N'No description available.', &#xA;&#x9;&#x9;@category_name=N'[Uncategorized (Local)]', &#xA;&#x9;&#x9;@owner_login_name=N'fdgomez', @job_id = @jobId OUTPUT&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;/****** Object:  Step [Gold_Debt SSIS ETL Process]    Script Date: 5/27/2024 3:48:23 PM ******/&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Gold_Debt SSIS ETL Process', &#xA;&#x9;&#x9;@step_id=1, &#xA;&#x9;&#x9;@cmdexec_success_code=0, &#xA;&#x9;&#x9;@on_success_action=1, &#xA;&#x9;&#x9;@on_success_step_id=0, &#xA;&#x9;&#x9;@on_fail_action=2, &#xA;&#x9;&#x9;@on_fail_step_id=0, &#xA;&#x9;&#x9;@retry_attempts=0, &#xA;&#x9;&#x9;@retry_interval=0, &#xA;&#x9;&#x9;@os_run_priority=0, @subsystem=N'SSIS', &#xA;&#x9;&#x9;@command=N'/FILE &quot;\&quot;C:\_BISolutions\Gold_Debt\Gold_Debt\Gold_Debt SSIS ETL Process.dtsx\&quot;&quot; /CHECKPOINTING OFF /REPORTING E', &#xA;&#x9;&#x9;@database_name=N'master', &#xA;&#x9;&#x9;@flags=0&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'Gold_Debt SSIS ETL Process Daily Refresh', &#xA;&#x9;&#x9;@enabled=1, &#xA;&#x9;&#x9;@freq_type=4, &#xA;&#x9;&#x9;@freq_interval=1, &#xA;&#x9;&#x9;@freq_subday_type=1, &#xA;&#x9;&#x9;@freq_subday_interval=0, &#xA;&#x9;&#x9;@freq_relative_interval=0, &#xA;&#x9;&#x9;@freq_recurrence_factor=0, &#xA;&#x9;&#x9;@active_start_date=20240527, &#xA;&#x9;&#x9;@active_end_date=99991231, &#xA;&#x9;&#x9;@active_start_time=10000, &#xA;&#x9;&#x9;@active_end_time=235959, &#xA;&#x9;&#x9;@schedule_uid=N'b0dc3b6b-5960-4780-8dae-8e6e15b26258'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;COMMIT TRANSACTION&#xA;GOTO EndSave&#xA;QuitWithRollback:&#xA;    IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION&#xA;EndSave:&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_Gold_Debt_SQLServerAgentDailyRefresh;&#xA;--GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Gold_Debt SQL Queries.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{000883DE-B8D7-4A13-9999-D76EE979910C}"
+          DTS:From="Package\Run Gold_Debt SQL Queries\Run Gold_Debt SQL Queries"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Run Gold_Debt SQL Queries\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Run Previous State Stored Procedures and Queries"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{63E729EB-D81A-4DDD-B48B-2AC5D786D5F6}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run Previous State Stored Procedures and Queries">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Generate Old View vDimDate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Generate vFactDebt, vFactCovid, vDimDate"
+          DTS:DTSID="{ACA39C3E-9C0C-447B-80ED-084EC6B2E47B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Generate Old View vDimDate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="CREATE OR ALTER VIEW [dbo].[vDimDate]&#xA;AS&#xA;/************&#xA;*Developer: Jeremy Warren&#xA;*Date: 05/12/2024&#xA;*Description: Dim Date VIew&#xA;*&#x9;5/12: Created view&#xA;*************/&#xA;SELECT&#xA;* &#xA;FROM [Gold_Debt].[dbo].[DimDate] WITH (NOLOCK)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactCovid"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Generate vFactDebt, vFactCovid, vDimDate"
+          DTS:DTSID="{B112E537-8A4C-4424-B9A5-D396B5159D56}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Generate Old View vFactCovid"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="CREATE OR ALTER VIEW [dbo].[vFactCovid]&#xA;AS&#xA;&#xA;SELECT&#xA;* &#xA;FROM [Gold_Debt].[dbo].[FactCovidOld] WITH (NOLOCK)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactDebt"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Generate vFactDebt, vFactCovid, vDimDate"
+          DTS:DTSID="{E476B1E3-9874-440F-8309-AFB82650FE85}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Generate Old View vFactDebt"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="CREATE OR ALTER VIEW [dbo].[vFactDebt]&#xA;AS&#xA;&#xA;SELECT&#xA;* &#xA;FROM [Gold_Debt].[dbo].[FactDebtOld] WITH (NOLOCK)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Run Old Dim &amp; Fact Table Stored Procedure Code To Create Dimension and Fact Tables"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute All Stored Procedures"
+          DTS:DTSID="{45E42756-C3BC-4F57-BB37-1619C3F6B4EA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run Old Dim &amp; Fact Table Stored Procedure Code To Create Dimension and Fact Tables"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="EXEC sp_DimDate;&#xA;GO&#xA;&#xA;EXEC sp_FactCovid;&#xA;GO&#xA;&#xA;EXEC sp_FactDebt;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_DimDate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="sp_DimDate"
+          DTS:DTSID="{12EDCF1C-D9BC-4587-9B43-256B3F4FAED1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run Old Store Procedure Code For sp_DimDate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="CREATE OR ALTER Procedure [dbo].[sp_DimDate]&#xA;AS&#xA;/************&#xA;*Developer: Jeremy Warren&#xA;*Date: 05/12/2024&#xA;*Description: Dim Date Sproc&#xA;*&#x9;5/12: Created Sproc&#xA;*************/&#xA;&#xA;---Drop Table&#xA;DROP TABLE IF EXISTS [dbo].[DimDate]&#xA;&#xA;-----Create table&#xA;Create Table DimDate&#xA;(&#xA;&#x9; TheDate date&#xA;&#x9;, TheDay int&#xA;&#x9;, TheDayName nvarchar (100)&#xA;&#x9;, TheWeek int&#xA;&#x9;, TheISOWeek int&#xA;&#x9;, TheDayOfWeek int&#xA;&#x9;, TheMonth int&#xA;&#x9;, TheMonthName nvarchar (100)&#xA;&#x9;, TheQuarter int&#xA;&#x9;, TheYear int&#xA;&#x9;, TheFirstOfMonth date&#xA;&#x9;, TheLastOfYear date&#xA;&#x9;, TheDayOfYear int&#xA;&#xA;)&#xA;&#xA;&#xA;---Perform Insert&#xA;Insert into dbo.DimDate&#xA;Select&#xA;      TheDate&#xA;&#x9;, TheDay&#xA;&#x9;, TheDayName&#xA;&#x9;, TheWeek&#xA;&#x9;, TheISOWeek&#xA;&#x9;, TheDayOfWeek&#xA;&#x9;, TheMonth&#xA;&#x9;, TheMonthName&#xA;&#x9;, TheQuarter&#xA;&#x9;, TheYear&#xA;&#x9;, TheFirstOfMonth&#xA;&#x9;, TheLastOfYear&#xA;&#x9;, TheDayOfYear&#xA;   from [Black_Unemployment].[dbo].[DimDate]&#xA;go" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactCovid"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="sp_FactCovid"
+          DTS:DTSID="{EB50E0C2-DF88-4B31-8311-1EB0D5EBA6EB}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run Old Store Procedure Code For sp_FactCovid"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS [dbo].[FactCovidOld]&#xA;GO&#xA;&#xA;CREATE OR ALTER PROCEDURE [dbo].[sp_FactCovid]&#xA;AS&#xA;/**************&#xA;*Developer: Tim Pauley&#xA;*Date: 04/16/2024&#xA;*Description: ETL Process for Raw Fact Covid &#xA;*&#xA;*&#xA;*****************/&#xA;&#xA;--Step 2: Drop Table&#xA;DROP TABLE IF EXISTS [dbo].[FactCovidOld]&#xA;&#xA;--Step 3: Create Table with updated types&#xA;CREATE TABLE [dbo].[FactCovidOld]&#xA;(&#xA;&#x9;FactCovid_Key int IDENTITY (1,1) --future Surrogate Key&#xA;&#x9;,ID INT&#xA;&#x9;,Updated date&#xA;&#x9;,Confirmed int&#xA;&#x9;,Confirmed_Change int&#xA;&#x9;,Deaths int&#xA;&#x9;,Deaths_Change int&#xA;&#x9;,Recovered int&#xA;&#x9;,Recovered_Change int&#xA;&#x9;,Latitude nvarchar(50)&#xA;&#x9;,Longitude nvarchar(50)&#xA;&#x9;,Iso2 nvarchar(50)&#xA;&#x9;,Iso3  nvarchar(50)&#xA;&#x9;,Country_Region nvarchar(50)&#xA;&#x9;,Admin_Region_1 nvarchar(50)&#xA;&#x9;,Iso_Subdivision nvarchar(50)&#xA;&#x9;,Admin_Region_2 nvarchar(50)&#xA;&#x9;--,Load_Time date&#xA;)&#xA;&#xA;--Step 4:Write ETL fixing datatypes&#xA;INSERT INTO [dbo].[FactCovidOld]&#xA;SELECT&#xA;--TOP 10  --Please start with TOP 10 rows. This will speed up your attempts&#xA;&#x9;CAST([id] as INT)&#xA;&#x9;, CAST([updated] as date)&#xA;&#x9;, CAST([confirmed] as INT)&#xA;&#x9;, CAST([confirmed_change] as INT)&#xA;&#x9;, CAST([deaths] as INT)&#xA;&#x9;, CAST([deaths_change] as INT)&#xA;&#x9;, CAST([recovered] as INT)&#xA;&#x9;, CAST([recovered_change] as INT)&#xA;&#x9;, [latitude]&#xA;&#x9;, [longitude]&#xA;&#x9;, [iso2]&#xA;&#x9;, [iso3]&#xA;&#x9;, [country_region]&#xA;&#x9;, [admin_region_1]&#xA;&#x9;, [iso_subdivision]&#xA;&#x9;, [admin_region_2]&#xA;&#x9;--, CAST([load_time] as date)&#xA;FROM [dbo].[bing_covid-19_data_Raw] RAW WITH (NOLOCK)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactDebt"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="sp_FactDebt"
+          DTS:DTSID="{E287F8C9-6EC7-4332-8B23-0CEB0B360CF1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run Old Store Procedure Code For sp_FactDebt"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F17C2559-7741-4B50-83FB-9CA84D666CB4}"
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS [dbo].[FactDebtOld]&#xA;GO&#xA;&#xA;CREATE OR ALTER Procedure [dbo].[sp_FactDebt]&#xA;AS&#xA;/************&#xA;*Developer: Jeremy Warren&#xA;*Date: 05/12/2024&#xA;*Description: Dim Date Sproc&#xA;*&#x9;5/12: Created Sproc&#xA;*************/&#xA;&#xA;---Drop Table&#xA;DROP TABLE IF EXISTS [dbo].[FactDebtOld]&#xA;&#xA;---Create table&#xA;Create table FactDebtOld&#xA;(&#xA;       fact_debt_key int identity (1,1)&#xA;&#x9;  ,Record_Date Date&#xA;&#x9;  ,Public_Debt float&#xA;      ,Intragovernmental_Holdings float&#xA;      ,Total_Public_Debt_Outstanding float&#xA;      ,Source_Line_Number int&#xA;      ,Fiscal_Year int&#xA;      ,Fiscal_Quarter_Number int&#xA;      ,Calendar_Year int&#xA;      ,Calendar_Quarter_Number int&#xA;      ,Calendar_Month_Number int&#xA;      ,Calendar_Day_Number int&#xA; )&#xA;&#xA; ---Perform insert&#xA;&#xA; Insert into [dbo].[FactDebtOld]&#xA; Select&#xA;&#xA;       [Record_Date]&#xA;&#x9;  ,[Debt_Held_by_the_Public]&#xA;      ,[Intragovernmental_Holdings]&#xA;      ,[Total_Public_Debt_Outstanding]&#xA;      ,[Source_Line_Number]&#xA;      ,[Fiscal_Year]&#xA;      ,[Fiscal_Quarter_Number]&#xA;      ,[Calendar_Year]&#xA;      ,[Calendar_Quarter_Number]&#xA;      ,[Calendar_Month_Number]&#xA;      ,[Calendar_Day_Number]&#xA;&#x9;  from [dbo].[DebtPenny_Raw]&#xA; go   " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{3E384A99-FEAC-4513-A3EF-F3177347E50A}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_DimDate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactCovid" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{37B6E4D6-F95F-42C7-AA2C-8DE7CFE7760D}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactCovid"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactDebt" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{07D2D2A7-DF9F-4EDD-85FE-264D5BBA5A19}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactDebt"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Run Old Dim &amp; Fact Table Stored Procedure Code To Create Dimension and Fact Tables" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{A00E90DA-D2FC-495E-98FA-02DA6FAC615B}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Run Old Dim &amp; Fact Table Stored Procedure Code To Create Dimension and Fact Tables"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactDebt" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{16EE0204-78D5-4F44-B443-122253EE6ED0}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactDebt"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactCovid" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{110DBBA2-762F-4190-B31D-5B7F777E0D16}"
+          DTS:From="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactCovid"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Run Previous State Stored Procedures and Queries\Generate Old View vDimDate" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Server Agent Schedule Refresh &amp; Next Steps"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3A9F65E4-8458-4263-9A9A-4F75C7936D97}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Server Agent Schedule Refresh &amp; Next Steps">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:Disabled="True"
+          DTS:DTSID="{008F6C85-755E-4622-864C-7C3CC531C7EB}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FADA0509-E78C-4974-A123-EC31320C23E7}"
+              SQLTask:SqlStatementSource="--WE ARE SETTING UP DAILY SCHEDULED REFRESHES USING SQL SERVER AGENT!&#xA;-------------------------------------------------------------------------------------------------------&#xA;--SQL SERVER AGENT SCHEDULED REFRESH FOR LOCAL INSTANCE&#xA;--DEPENDING ON WHICH SERVER YOU ARE ON, YOU WILL HAVE TO COMMENT ON AND OFF THE SQL SEVER AGENT BLOCKS OF CODE.&#xA;&#xA;&#xA;USE [msdb]&#xA;GO&#xA;--USE [Gold_Debt]&#xA;--GO &#xA;&#xA;--DECLARE @jobID1 Binary(16)&#xA;--SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;--IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;--GO&#xA;&#xA;CREATE OR ALTER PROCEDURE sp_Gold_Debt_SQLServerAgentDailyRefresh AS&#xA;BEGIN&#xA;&#xA;/****** Object:  Job [Gold_Debt Daily Refresh]    Script Date: 5/27/2024 4:21:54 PM ******/&#xA;BEGIN TRANSACTION&#xA;DECLARE @ReturnCode INT&#xA;SELECT @ReturnCode = 0&#xA;DECLARE @jobID1 Binary(16)&#xA;SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;&#xA;/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 5/27/2024 4:21:54 PM ******/&#xA;IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)&#xA;BEGIN&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;&#xA;END&#xA;&#xA;DECLARE @jobId BINARY(16)&#xA;EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Gold_Debt Daily Refresh', &#xA;&#x9;&#x9;@enabled=1, &#xA;&#x9;&#x9;@notify_level_eventlog=0, &#xA;&#x9;&#x9;@notify_level_email=0, &#xA;&#x9;&#x9;@notify_level_netsend=0, &#xA;&#x9;&#x9;@notify_level_page=0, &#xA;&#x9;&#x9;@delete_level=0, &#xA;&#x9;&#x9;@description=N'No description available.', &#xA;&#x9;&#x9;@category_name=N'[Uncategorized (Local)]', &#xA;&#x9;&#x9;@owner_login_name=N'DESKTOP-L3H8CVG\Felipe', @job_id = @jobId OUTPUT&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;/****** Object:  Step [Gold_Debt SSIS ETL Process]    Script Date: 5/27/2024 4:21:54 PM ******/&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Gold_Debt SSIS ETL Process', &#xA;&#x9;&#x9;@step_id=1, &#xA;&#x9;&#x9;@cmdexec_success_code=0, &#xA;&#x9;&#x9;@on_success_action=1, &#xA;&#x9;&#x9;@on_success_step_id=0, &#xA;&#x9;&#x9;@on_fail_action=2, &#xA;&#x9;&#x9;@on_fail_step_id=0, &#xA;&#x9;&#x9;@retry_attempts=0, &#xA;&#x9;&#x9;@retry_interval=0, &#xA;&#x9;&#x9;@os_run_priority=0, @subsystem=N'SSIS', &#xA;&#x9;&#x9;@command=N'/FILE &quot;\&quot;C:\_BISolutions\Gold_Debt\Gold_Debt\Gold_Debt SSIS ETL Process.dtsx\&quot;&quot; /CHECKPOINTING OFF /REPORTING E', &#xA;&#x9;&#x9;@database_name=N'master', &#xA;&#x9;&#x9;@flags=0&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'Gold_Debt SSIS ETL Process Daily Refresh', &#xA;&#x9;&#x9;@enabled=1, &#xA;&#x9;&#x9;@freq_type=4, &#xA;&#x9;&#x9;@freq_interval=1, &#xA;&#x9;&#x9;@freq_subday_type=1, &#xA;&#x9;&#x9;@freq_subday_interval=0, &#xA;&#x9;&#x9;@freq_relative_interval=0, &#xA;&#x9;&#x9;@freq_recurrence_factor=0, &#xA;&#x9;&#x9;@active_start_date=20240527, &#xA;&#x9;&#x9;@active_end_date=99991231, &#xA;&#x9;&#x9;@active_start_time=10000, &#xA;&#x9;&#x9;@active_end_time=235959, &#xA;&#x9;&#x9;@schedule_uid=N'6d3e1ef9-abc3-4a5d-88fa-1c3288595d7d'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'&#xA;IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;COMMIT TRANSACTION&#xA;GOTO EndSave&#xA;QuitWithRollback:&#xA;    IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION&#xA;EndSave:&#xA;END&#xA;GO&#xA;&#xA;--EXEC sp_Gold_Debt_SQLServerAgentDailyRefresh;&#xA;--GO&#xA;&#xA;&#xA;------------------------------------------&#xA;--SQL SERVER AGENT SSIS DAILY ETL SCHEDULED RUN ON UW SERVER:&#xA;--DEPENDING ON WHICH SERVER YOU ARE ON, YOU WILL HAVE TO COMMENT ON AND OFF THE SQL SEVER AGENT BLOCKS OF CODE.&#xA;&#xA;&#xA;&#xA;&#xA;--USE [msdb]&#xA;--GO&#xA;----USE [Gold_Debt]&#xA;----GO &#xA;&#xA;----DECLARE @jobID1 Binary(16)&#xA;----SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;----IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;----GO&#xA;&#xA;--CREATE OR ALTER PROCEDURE sp_Gold_Debt_SQLServerAgentDailyRefresh AS&#xA;--BEGIN&#xA;--/****** Object:  Job [Gold_Debt Daily Refresh]    Script Date: 5/27/2024 3:48:22 PM ******/&#xA;--BEGIN TRANSACTION&#xA;--DECLARE @ReturnCode INT&#xA;--SELECT @ReturnCode = 0&#xA;--DECLARE @jobID1 Binary(16)&#xA;--SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;--IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;&#xA;--/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 5/27/2024 3:48:23 PM ******/&#xA;--IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)&#xA;--BEGIN&#xA;--EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;&#xA;--END&#xA;&#xA;--DECLARE @jobId BINARY(16)&#xA;--EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Gold_Debt Daily Refresh', &#xA;--&#x9;&#x9;@enabled=1, &#xA;--&#x9;&#x9;@notify_level_eventlog=0, &#xA;--&#x9;&#x9;@notify_level_email=0, &#xA;--&#x9;&#x9;@notify_level_netsend=0, &#xA;--&#x9;&#x9;@notify_level_page=0, &#xA;--&#x9;&#x9;@delete_level=0, &#xA;--&#x9;&#x9;@description=N'No description available.', &#xA;--&#x9;&#x9;@category_name=N'[Uncategorized (Local)]', &#xA;--&#x9;&#x9;@owner_login_name=N'fdgomez', @job_id = @jobId OUTPUT&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;--/****** Object:  Step [Gold_Debt SSIS ETL Process]    Script Date: 5/27/2024 3:48:23 PM ******/&#xA;--EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Gold_Debt SSIS ETL Process', &#xA;--&#x9;&#x9;@step_id=1, &#xA;--&#x9;&#x9;@cmdexec_success_code=0, &#xA;--&#x9;&#x9;@on_success_action=1, &#xA;--&#x9;&#x9;@on_success_step_id=0, &#xA;--&#x9;&#x9;@on_fail_action=2, &#xA;--&#x9;&#x9;@on_fail_step_id=0, &#xA;--&#x9;&#x9;@retry_attempts=0, &#xA;--&#x9;&#x9;@retry_interval=0, &#xA;--&#x9;&#x9;@os_run_priority=0, @subsystem=N'SSIS', &#xA;--&#x9;&#x9;@command=N'/FILE &quot;\&quot;C:\_BISolutions\Gold_Debt\Gold_Debt\Gold_Debt SSIS ETL Process.dtsx\&quot;&quot; /CHECKPOINTING OFF /REPORTING E', &#xA;--&#x9;&#x9;@database_name=N'master', &#xA;--&#x9;&#x9;@flags=0&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;--EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;--EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'Gold_Debt SSIS ETL Process Daily Refresh', &#xA;--&#x9;&#x9;@enabled=1, &#xA;--&#x9;&#x9;@freq_type=4, &#xA;--&#x9;&#x9;@freq_interval=1, &#xA;--&#x9;&#x9;@freq_subday_type=1, &#xA;--&#x9;&#x9;@freq_subday_interval=0, &#xA;--&#x9;&#x9;@freq_relative_interval=0, &#xA;--&#x9;&#x9;@freq_recurrence_factor=0, &#xA;--&#x9;&#x9;@active_start_date=20240527, &#xA;--&#x9;&#x9;@active_end_date=99991231, &#xA;--&#x9;&#x9;@active_start_time=10000, &#xA;--&#x9;&#x9;@active_end_time=235959, &#xA;--&#x9;&#x9;@schedule_uid=N'b0dc3b6b-5960-4780-8dae-8e6e15b26258'&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;--EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'&#xA;--IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback&#xA;--COMMIT TRANSACTION&#xA;--GOTO EndSave&#xA;--QuitWithRollback:&#xA;--    IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION&#xA;--EndSave:&#xA;--END&#xA;--GO&#xA;&#xA;----EXEC sp_Gold_Debt_SQLServerAgentDailyRefresh;&#xA;----GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SERVER AGENT GOLD_DEBT DAILY ETL REFRESH"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0CE3480D-D9A7-45A6-8EAC-2CF2A44F5AE5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL SERVER AGENT GOLD_DEBT DAILY ETL REFRESH"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FADA0509-E78C-4974-A123-EC31320C23E7}"
+              SQLTask:SqlStatementSource="--DECLARE @jobID1 Binary(16)&#xA;--SELECT @jobID1 = job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh'&#xA;--IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs WHERE name = N'Gold_Debt Daily Refresh') EXEC msdb.dbo.sp_delete_job @jobID1&#xA;--GO&#xA;&#xA;EXEC sp_Gold_Debt_SQLServerAgentDailyRefresh;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SQL Server Agent Schedule Refresh &amp; Next Steps.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{DED3517B-52C7-42C2-AC54-7ED909A5C2F1}"
+          DTS:From="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SERVER AGENT GOLD_DEBT DAILY ETL REFRESH" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5E5CBDAD-3ACE-4735-98F7-8996FD7A52A8}"
+      DTS:From="Package\Gold_Debt Database Creation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Run Gold_Debt SQL Queries" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{EFA24A34-7A6C-4F37-BCF0-302E1DCAE97A}"
+      DTS:From="Package\Raw Data Bulk Insert Into Staging Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{686ECBD7-C5D8-4312-B6F1-6E2BDA7C5E6F}"
+      DTS:From="Package\Create Dimension and Fact ETL Views"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\Dimension &amp; Fact Tables Refresh" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{F461C7E2-8CA5-4119-B1EB-2D6F9F09045A}"
+      DTS:From="Package\Run Gold_Debt SQL Queries"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\Gold_Debt Staging Tables Creation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{11463435-F211-4C8E-8ADD-4B5380EAD9DC}"
+      DTS:From="Package\PRE SSIS RUN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Run Previous State Stored Procedures and Queries" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{97EE2DE3-0AB5-4049-B36D-C7B674928523}"
+      DTS:From="Package\Dimension &amp; Fact Tables Refresh"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Add Back Foreign Keys" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{9ED40C4E-85A3-447D-9224-EE626010E9C1}"
+      DTS:From="Package\Add Back Foreign Keys"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Generate Views Refresh" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA278908-42D8-4AE9-A906-307B84C43C8B}"
+      DTS:From="Package\Generate Views Refresh"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\SQL Server Agent Schedule Refresh &amp; Next Steps" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{DD80D551-F8C8-41BE-A367-7A39ABA65940}"
+      DTS:From="Package\Gold_Debt Staging Tables Creation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Raw Data Bulk Insert Into Staging Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{B1406443-9A19-4FAE-B7B5-4ED63F6529BA}"
+      DTS:From="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Create ETLLog Table &amp; ETLLogView" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{22936A1F-6EE2-40A4-9DE2-0D2CF759E782}"
+      DTS:From="Package\Create ETLLog Table &amp; ETLLogView"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Drop Foreign Keys &amp; Truncate Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{F4DA80B9-F9D9-498E-A318-AED90692838C}"
+      DTS:From="Package\Drop Foreign Keys &amp; Truncate Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Create Dimension and Fact ETL Views" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{C0A2D08F-0C4B-46B6-B3F0-BF20B17D0277}"
+      DTS:From="Package\Run Previous State Stored Procedures and Queries"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Gold_Debt Database Creation" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Add Back Foreign Keys\Add Back Foreign Keys"
+          TopLeft="26.6666666666665,14.3333333333333" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="332,129"
+          Size="332,172"
+          Id="Package\Add Back Foreign Keys"
+          TopLeft="667.071428571427,1220.72222222222" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Create Dimension and Fact ETL Views\Create DimCountries ETL View"
+          TopLeft="21.2222222222222,13.8888888888889" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Create Dimension and Fact ETL Views\Create DimRegions ETL View"
+          TopLeft="20.2499999999998,58.75" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Create Dimension and Fact ETL Views\Create FactCovid ETL View"
+          TopLeft="21.75,111" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Create Dimension and Fact ETL Views\Create FactDebt ETL View"
+          TopLeft="20.5,159.75" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="296,249"
+          Size="296,292"
+          Id="Package\Create Dimension and Fact ETL Views"
+          TopLeft="202.28968253968,899.380952380953" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log Table"
+          TopLeft="27.7777777777778,19.3333333333334" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Create ETLLog Table &amp; ETLLogView\Create ETL Log View"
+          TopLeft="29.0277777777777,86.8333333333334" />
+        <EdgeLayout
+          Id="Package\Create ETLLog Table &amp; ETLLogView.PrecedenceConstraints[Constraint]"
+          TopLeft="117.402777777778,61.3333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.5"
+              Start="0,0"
+              End="0,18">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="274,159"
+          Size="274,202"
+          Id="Package\Create ETLLog Table &amp; ETLLogView"
+          TopLeft="1227.59126984127,742.853174603175" />
+        <NodeLayout
+          Size="295,42"
+          Id="Package\Dimension &amp; Fact Tables Refresh\Dim Countries Flush and Fill Stored Procedure"
+          TopLeft="30.1666666666664,74" />
+        <NodeLayout
+          Size="293,42"
+          Id="Package\Dimension &amp; Fact Tables Refresh\Dim Dates Flush and Fill Stored Procedure"
+          TopLeft="28,16.2222222222223" />
+        <NodeLayout
+          Size="289,42"
+          Id="Package\Dimension &amp; Fact Tables Refresh\Dim Regions Flush and Fill Stored Procedure"
+          TopLeft="37.9444444444441,128.444444444444" />
+        <NodeLayout
+          Size="277,42"
+          Id="Package\Dimension &amp; Fact Tables Refresh\Fact Covid Flush and Fill Stored Procedure"
+          TopLeft="25.7222222222224,199.777777777778" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\Dimension &amp; Fact Tables Refresh\Fact Debt Flush and Fill Stored Procedure"
+          TopLeft="28.3888888888886,259.888888888889" />
+        <EdgeLayout
+          Id="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint]"
+          TopLeft="28,37.2222222222223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="2.1666666666664,52.111111111111"
+              Start="0,0"
+              End="-5.3333333333336,52.111111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,48.111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,48.111111111111"
+                    Point2="-22.5,52.111111111111"
+                    Point3="-18.5,52.111111111111" />
+                  <mssgle:LineSegment
+                    End="-5.3333333333336,52.111111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 1]"
+          TopLeft="30.1666666666664,100.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="7.77777777777771,48.7777777777778"
+              Start="0,0"
+              End="0.277777777777715,48.7777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,44.7777777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,44.7777777777778"
+                    Point2="-22.5,48.7777777777778"
+                    Point3="-18.5,48.7777777777778" />
+                  <mssgle:LineSegment
+                    End="0.277777777777715,48.7777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 2]"
+          TopLeft="182.444444444444,170.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.2222222222217,29.3333333333339"
+              Start="0,0"
+              End="-18.2222222222217,21.8333333333339">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.666666666667"
+                    Point2="0,14.666666666667"
+                    Point3="-4,14.666666666667" />
+                  <mssgle:LineSegment
+                    End="-14.2222222222217,14.666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.2222222222217,14.666666666667"
+                    Point2="-18.2222222222217,14.666666666667"
+                    Point3="-18.2222222222217,18.666666666667" />
+                  <mssgle:LineSegment
+                    End="-18.2222222222217,21.8333333333339" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimension &amp; Fact Tables Refresh.PrecedenceConstraints[Constraint 3]"
+          TopLeft="25.7222222222224,220.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="2.66666666666617,60.1111111111104"
+              Start="0,0"
+              End="-4.83333333333383,60.1111111111104">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,56.1111111111104" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,56.1111111111104"
+                    Point2="-22.5,60.1111111111104"
+                    Point3="-18.5,60.1111111111104" />
+                  <mssgle:LineSegment
+                    End="-4.83333333333383,60.1111111111104" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="341,321"
+          Size="341,364"
+          Id="Package\Dimension &amp; Fact Tables Refresh"
+          TopLeft="189.301587301583,1238.85317460318" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Drop Foreign Keys &amp; Truncate Tables\Drop Foreign Keys"
+          TopLeft="28,12.1111111111111" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Drop Foreign Keys &amp; Truncate Tables\Truncate Tables"
+          TopLeft="23.5555555555557,76.5555555555557" />
+        <EdgeLayout
+          Id="Package\Drop Foreign Keys &amp; Truncate Tables.PrecedenceConstraints[Constraint]"
+          TopLeft="193,33.1111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.4444444444443,64.4444444444446"
+              Start="0,0"
+              End="-6.94444444444434,64.4444444444446">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,60.4444444444446" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,60.4444444444446"
+                    Point2="22.5,64.4444444444446"
+                    Point3="18.5,64.4444444444446" />
+                  <mssgle:LineSegment
+                    End="-6.94444444444434,64.4444444444446" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="284,141"
+          Size="284,184"
+          Id="Package\Drop Foreign Keys &amp; Truncate Tables"
+          TopLeft="781.35317460317,770.007936507937" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\Generate Views Refresh\Create Or Alter vDimCountries View"
+          TopLeft="25.8888888888889,52.1111111111111" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Generate Views Refresh\Create Or Alter vDimDates View"
+          TopLeft="27,3.22222222222229" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Generate Views Refresh\Create Or Alter vDimRegions View"
+          TopLeft="29.2222222222224,103.222222222222" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Generate Views Refresh\Create Or Alter vFactCovid View"
+          TopLeft="28.1111111111111,154.333333333333" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Generate Views Refresh\Create Or alter vFactDebt View"
+          TopLeft="31.4444444444443,209.888888888889" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="343,307"
+          Size="343,350"
+          Id="Package\Generate Views Refresh"
+          TopLeft="1109.45238095238,1097.86904761905" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Gold_Debt Database Creation\Gold_Debt Database Creation"
+          TopLeft="6,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="253,69"
+          Size="253,112"
+          Id="Package\Gold_Debt Database Creation"
+          TopLeft="611.999999999999,119.428571428572" />
+        <NodeLayout
+          Size="410,42"
+          Id="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Add Foreign Key Constraints To Dimension and Fact Tables"
+          TopLeft="25,88" />
+        <NodeLayout
+          Size="301,42"
+          Id="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation\Gold_Debt Dimension and Fact Tables Creation"
+          TopLeft="26.6666666666667,15.2222222222222" />
+        <EdgeLayout
+          Id="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation.PrecedenceConstraints[Constraint]"
+          TopLeft="177.166666666667,57.2222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.8333333333333,30.7777777777778"
+              Start="0,0"
+              End="52.8333333333333,23.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.3888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.3888888888889"
+                    Point2="0,15.3888888888889"
+                    Point3="4,15.3888888888889" />
+                  <mssgle:LineSegment
+                    End="48.8333333333333,15.3888888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.8333333333333,15.3888888888889"
+                    Point2="52.8333333333333,15.3888888888889"
+                    Point3="52.8333333333333,19.3888888888889" />
+                  <mssgle:LineSegment
+                    End="52.8333333333333,23.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="449,147"
+          Size="449,190"
+          Id="Package\Gold_Debt Dimension and Fact Tables &amp; Foreign Key Constraints Creation"
+          TopLeft="1572.73809523809,695.960317460318" />
+        <NodeLayout
+          Size="325,42"
+          Id="Package\Gold_Debt Staging Tables Creation\StagingBingCovid19DataRaw Staging Table Creation"
+          TopLeft="8,10" />
+        <NodeLayout
+          Size="296,42"
+          Id="Package\Gold_Debt Staging Tables Creation\StagingDebtPennyRaw Staging Table Creation"
+          TopLeft="11,74" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="338,219"
+          Size="338,262"
+          Id="Package\Gold_Debt Staging Tables Creation"
+          TopLeft="1342.88095238094,19.0396825396826" />
+        <AnnotationLayout
+          Text="TASKS -&gt; IMPORT DATA-TIER APPLICATION&#xA;FOR GOLD_DEBT.BACPAC AS FIRST STEP!!!&#xA;WE NEED TO IMPORT OUR RAW DATA TABLES &#xA;FOR COVID AND DEBT"
+          ParentId="Package\PRE SSIS RUN"
+          FontInfo="{assembly:Null}"
+          Size="276,88"
+          Id="2f3a06ab-effa-4e89-b561-11c0e8cf1918"
+          TopLeft="20.2857142857143,16.7142857142857" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="352,140"
+          Size="352,183"
+          Id="Package\PRE SSIS RUN"
+          TopLeft="168.047619047619,23.0952380952381" />
+        <NodeLayout
+          Size="306,42"
+          Id="Package\Raw Data Bulk Insert Into Staging Tables\BULK INSERT Into Staging Table StagingBingCovid19DataRaw"
+          TopLeft="5,9" />
+        <NodeLayout
+          Size="302,42"
+          Id="Package\Raw Data Bulk Insert Into Staging Tables\BULK INSERT Into Staging Table StagingDebtPennyRaw"
+          TopLeft="4,76" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="324,155"
+          Size="324,198"
+          Id="Package\Raw Data Bulk Insert Into Staging Tables"
+          TopLeft="1636.27777777777,321.900793650794" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Run Gold_Debt SQL Queries\Run Gold_Debt SQL Queries"
+          TopLeft="10.6071428571427,81.5" />
+        <NodeLayout
+          Size="200,68"
+          Id="Package\Run Gold_Debt SQL Queries\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          TopLeft="20.1428571428571,158.142857142857" />
+        <EdgeLayout
+          Id="Package\Run Gold_Debt SQL Queries.PrecedenceConstraints[Constraint]"
+          TopLeft="120.125,123.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.642857142857"
+              Start="0,0"
+              End="0,27.142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="RERUNNING ALL GOLD_DEBT SQL&#xA;SCRIPTS TO BE ABLE TO COMPLETE&#xA;SSIS PACKAGE"
+          ParentId="Package\Run Gold_Debt SQL Queries"
+          FontInfo="{assembly:Null}"
+          Size="215,72"
+          Id="36833591-f023-472c-93f7-c25e5c6b82cc"
+          TopLeft="6.25,17" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="393,312"
+          Size="393,355"
+          Id="Package\Run Gold_Debt SQL Queries"
+          TopLeft="905.642857142858,274.884920634921" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Generate Old View vDimDate"
+          TopLeft="28,504.222222222222" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactCovid"
+          TopLeft="35.7777777777777,446.444444444444" />
+        <NodeLayout
+          Size="246,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Generate Old View vFactDebt"
+          TopLeft="47.5555555555554,379.698412698413" />
+        <NodeLayout
+          Size="272,56"
+          Id="Package\Run Previous State Stored Procedures and Queries\Run Old Dim &amp; Fact Table Stored Procedure Code To Create Dimension and Fact Tables"
+          TopLeft="32.3412698412697,313.730158730159" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_DimDate"
+          TopLeft="37.5555555555556,134.285714285714" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactCovid"
+          TopLeft="35.6507936507936,189" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Run Previous State Stored Procedures and Queries\Run Old Store Procedure Code For sp_FactDebt"
+          TopLeft="23.269841269841,249" />
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint]"
+          TopLeft="261.555555555556,155.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.904761904762,49.0476190476192"
+              Start="0,0"
+              End="-12.404761904762,49.0476190476192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,45.0476190476192" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,45.0476190476192"
+                    Point2="22.5,49.0476190476192"
+                    Point3="18.5,49.0476190476192" />
+                  <mssgle:LineSegment
+                    End="-12.404761904762,49.0476190476192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 1]"
+          TopLeft="241.650793650794,210">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.3809523809527,39.0000000000001"
+              Start="0,0"
+              End="-83.3809523809527,31.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.3809523809527,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.3809523809527,0"
+                    Point2="-83.3809523809527,0"
+                    Point3="-83.3809523809527,4" />
+                  <mssgle:LineSegment
+                    End="-83.3809523809527,31.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 2]"
+          TopLeft="158.269841269841,291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.0714285714288,22.7301587301588"
+              Start="0,0"
+              End="10.0714285714288,15.2301587301588">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.3650793650794" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.3650793650794"
+                    Point2="0,11.3650793650794"
+                    Point3="4,11.3650793650794" />
+                  <mssgle:LineSegment
+                    End="6.07142857142875,11.3650793650794" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.07142857142875,11.3650793650794"
+                    Point2="10.0714285714288,11.3650793650794"
+                    Point3="10.0714285714288,15.3650793650794" />
+                  <mssgle:LineSegment
+                    End="10.0714285714288,15.2301587301588" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 3]"
+          TopLeft="32.3412698412697,341.730158730159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.2142857142857,58.9682539682541"
+              Start="0,0"
+              End="7.71428571428569,58.9682539682541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,54.9682539682541" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,54.9682539682541"
+                    Point2="-22.5,58.9682539682541"
+                    Point3="-18.5,58.9682539682541" />
+                  <mssgle:LineSegment
+                    End="7.71428571428569,58.9682539682541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 4]"
+          TopLeft="170.555555555555,421.698412698413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.2777777777777,24.7460317460313"
+              Start="0,0"
+              End="-16.2777777777777,17.2460317460313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.37301587301567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.37301587301567"
+                    Point2="0,12.3730158730157"
+                    Point3="-4,12.3730158730157" />
+                  <mssgle:LineSegment
+                    End="-12.2777777777777,12.3730158730157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.2777777777777,12.3730158730157"
+                    Point2="-16.2777777777777,12.3730158730157"
+                    Point3="-16.2777777777777,16.3730158730157" />
+                  <mssgle:LineSegment
+                    End="-16.2777777777777,17.2460317460313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Run Previous State Stored Procedures and Queries.PrecedenceConstraints[Constraint 5]"
+          TopLeft="35.7777777777777,467.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-7.77777777777771,57.7777777777779"
+              Start="0,0"
+              End="-15.2777777777777,57.7777777777779">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-26.2777777777777,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.2777777777777,0"
+                    Point2="-30.2777777777777,0"
+                    Point3="-30.2777777777777,4" />
+                  <mssgle:LineSegment
+                    End="-30.2777777777777,53.7777777777779" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.2777777777777,53.7777777777779"
+                    Point2="-30.2777777777777,57.7777777777779"
+                    Point3="-26.2777777777777,57.7777777777779" />
+                  <mssgle:LineSegment
+                    End="-15.2777777777777,57.7777777777779" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="PLEASE MAKE SURE TO RUN ENTIRE&#xA; 'Gold_Debt Final SQL Queries' &#xA;SCRIPT BEFORE RUNNING &#xA;THIS SSIS PACKAGE!!!!!!!!!&#xA;&#xA;HAVE CSV FILES IN C:\DATA DIRECTORY"
+          ParentId="Package\Run Previous State Stored Procedures and Queries"
+          FontInfo="{assembly:Null}"
+          Size="238,120"
+          Id="01cfcb05-2f26-4c9d-841d-d942319a1a8f"
+          TopLeft="20.9126984126983,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="346,555"
+          Size="346,598"
+          Id="Package\Run Previous State Stored Procedures and Queries"
+          TopLeft="163.611111111111,253.599206349206" />
+        <NodeLayout
+          Size="419,42"
+          Id="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SCRIPT TO SET UP STORED PROCEDURE FOR SQL SERVER AGENT"
+          TopLeft="28,9.42857142857133" />
+        <NodeLayout
+          Size="337,42"
+          Id="Package\SQL Server Agent Schedule Refresh &amp; Next Steps\SQL SERVER AGENT GOLD_DEBT DAILY ETL REFRESH"
+          TopLeft="22,88.4642857142853" />
+        <EdgeLayout
+          Id="Package\SQL Server Agent Schedule Refresh &amp; Next Steps.PrecedenceConstraints[Constraint]"
+          TopLeft="237.5,51.4285714285713">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47,37.035714285714"
+              Start="0,0"
+              End="-47,29.535714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.517857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.517857142857"
+                    Point2="0,18.517857142857"
+                    Point3="-4,18.517857142857" />
+                  <mssgle:LineSegment
+                    End="-43,18.517857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43,18.517857142857"
+                    Point2="-47,18.517857142857"
+                    Point3="-47,22.517857142857" />
+                  <mssgle:LineSegment
+                    End="-47,29.535714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Remove Database Creation Sequence Container&#xA;In Order To Have ETL Log History Buildup.&#xA;&#xA;DISABLE ETLLOG TABLE CREATION SQL SCRIPT FOR ETL LOG &#xA;HISTORY BUILDUP&#xA;&#xA;DISABLE GOLD_DEBT SQL QUERIES UNLESS NEEDED AFTER &#xA;SUCCESSFULLY SETTING UP DATABASE FROM SSIS  EXECUTION&#xA;&#xA;Keep Gold_Debt SQL Scripts In Sync In SSIS&#xA;Sequence Container With Our Gold_Debt SQL Queries.sql&#xA;File&#xA;&#xA;DISABLE SQL SERVER AGENT SCHEDULE REFRESH SEQUENCE&#xA;CONTAINER ONCE THE REFRESH JOB HAS BEEN CREATED."
+          ParentId="Package\SQL Server Agent Schedule Refresh &amp; Next Steps"
+          FontInfo="{assembly:Null}"
+          Size="365,263"
+          Id="f59cf893-0734-41bb-96d5-bb7b8357f626"
+          TopLeft="16.6388888888887,128.269841269841" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="452,446"
+          Size="452,489"
+          Id="Package\SQL Server Agent Schedule Refresh &amp; Next Steps"
+          TopLeft="1526.94047619047,1070.71825396826" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="738.499999999999,231.428571428572">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="363.642857142859,43.4563492063493"
+              Start="0,0"
+              End="363.642857142859,35.9563492063493">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7281746031747" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.7281746031747"
+                    Point2="0,21.7281746031747"
+                    Point3="4,21.7281746031747" />
+                  <mssgle:LineSegment
+                    End="359.642857142859,21.7281746031747" />
+                  <mssgle:CubicBezierSegment
+                    Point1="359.642857142859,21.7281746031747"
+                    Point2="363.642857142859,21.7281746031747"
+                    Point3="363.642857142859,25.7281746031747" />
+                  <mssgle:LineSegment
+                    End="363.642857142859,35.9563492063493" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="1797.75793650793,519.900793650794">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,176.059523809524"
+              Start="0,0"
+              End="0,168.559523809524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,168.559523809524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="350.28968253968,1191.38095238095">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.51190476190311,47.4722222222269"
+              Start="0,0"
+              End="9.51190476190311,39.9722222222269">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7361111111135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.7361111111135"
+                    Point2="0,23.7361111111135"
+                    Point3="4,23.7361111111135" />
+                  <mssgle:LineSegment
+                    End="5.51190476190311,23.7361111111135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.51190476190311,23.7361111111135"
+                    Point2="9.51190476190311,23.7361111111135"
+                    Point3="9.51190476190311,27.7361111111135" />
+                  <mssgle:LineSegment
+                    End="9.51190476190311,39.9722222222269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="1298.64285714286,452.384920634921">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44.238095238082,-302.345238095238"
+              Start="0,0"
+              End="36.738095238082,-302.345238095238">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.119047619041,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.119047619041,0"
+                    Point2="22.119047619041,0"
+                    Point3="22.119047619041,-4" />
+                  <mssgle:LineSegment
+                    End="22.119047619041,-298.345238095238" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.119047619041,-298.345238095238"
+                    Point2="22.119047619041,-302.345238095238"
+                    Point3="26.119047619041,-302.345238095238" />
+                  <mssgle:LineSegment
+                    End="36.738095238082,-302.345238095238" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="344.047619047619,206.095238095238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.7698412698413,47.5039682539679"
+              Start="0,0"
+              End="-63.7698412698413,40.0039682539679">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.3711847224504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.3711847224504"
+                    Point2="0,28.3711847224504"
+                    Point3="-4,28.3711847224504" />
+                  <mssgle:LineSegment
+                    End="-59.7698412698413,28.3711847224504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.7698412698413,28.3711847224504"
+                    Point2="-63.7698412698413,28.3711847224504"
+                    Point3="-63.7698412698413,32.3711847224504" />
+                  <mssgle:LineSegment
+                    End="-63.7698412698413,40.0039682539679" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="530.301587301583,1420.85317460318">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.769841269844,-114.13095238096"
+              Start="0,0"
+              End="129.269841269844,-114.13095238096">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.384920634922,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.384920634922,0"
+                    Point2="68.384920634922,0"
+                    Point3="68.384920634922,-4" />
+                  <mssgle:LineSegment
+                    End="68.384920634922,-110.13095238096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68.384920634922,-110.13095238096"
+                    Point2="68.384920634922,-114.13095238096"
+                    Point3="72.384920634922,-114.13095238096" />
+                  <mssgle:LineSegment
+                    End="129.269841269844,-114.13095238096" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="999.071428571427,1306.72222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110.380952380953,-33.8531746031699"
+              Start="0,0"
+              End="102.880952380953,-33.8531746031699">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.1904761904765,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.1904761904765,0"
+                    Point2="55.1904761904765,0"
+                    Point3="55.1904761904765,-4" />
+                  <mssgle:LineSegment
+                    End="55.1904761904765,-29.8531746031699" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.1904761904765,-29.8531746031699"
+                    Point2="55.1904761904765,-33.8531746031699"
+                    Point3="59.1904761904765,-33.8531746031699" />
+                  <mssgle:LineSegment
+                    End="102.880952380953,-33.8531746031699" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="1452.45238095238,1272.86904761905">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74.48809523809,42.3492063492099"
+              Start="0,0"
+              End="66.98809523809,42.3492063492099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.244047619045,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.244047619045,0"
+                    Point2="37.244047619045,0"
+                    Point3="37.244047619045,4" />
+                  <mssgle:LineSegment
+                    End="37.244047619045,38.3492063492099" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.244047619045,38.3492063492099"
+                    Point2="37.244047619045,42.3492063492099"
+                    Point3="41.244047619045,42.3492063492099" />
+                  <mssgle:LineSegment
+                    End="66.98809523809,42.3492063492099" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="1511.88095238094,281.039682539683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="286.39682539683,40.8611111111114"
+              Start="0,0"
+              End="286.39682539683,33.3611111111114">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4305555555557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4305555555557"
+                    Point2="0,20.4305555555557"
+                    Point3="4,20.4305555555557" />
+                  <mssgle:LineSegment
+                    End="282.39682539683,20.4305555555557" />
+                  <mssgle:CubicBezierSegment
+                    Point1="282.39682539683,20.4305555555557"
+                    Point2="286.39682539683,20.4305555555557"
+                    Point3="286.39682539683,24.4305555555557" />
+                  <mssgle:LineSegment
+                    End="286.39682539683,33.3611111111114" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="1572.73809523809,790.960317460318">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.146825396826,52.892857142857"
+              Start="0,0"
+              End="-63.646825396826,52.892857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-31.573412698413,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.573412698413,0"
+                    Point2="-35.573412698413,0"
+                    Point3="-35.573412698413,4" />
+                  <mssgle:LineSegment
+                    End="-35.573412698413,48.892857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.573412698413,48.892857142857"
+                    Point2="-35.573412698413,52.892857142857"
+                    Point3="-39.573412698413,52.892857142857" />
+                  <mssgle:LineSegment
+                    End="-63.646825396826,52.892857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="1227.59126984127,843.853174603175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-162.238095238099,18.1547619047619"
+              Start="0,0"
+              End="-154.738095238099,18.1547619047619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-77.1190476190495,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-77.1190476190495,0"
+                    Point2="-81.1190476190495,0"
+                    Point3="-81.1190476190495,4" />
+                  <mssgle:LineSegment
+                    End="-81.1190476190495,14.1547619047619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.1190476190495,14.1547619047619"
+                    Point2="-81.1190476190495,18.1547619047619"
+                    Point3="-85.1190476190495,18.1547619047619" />
+                  <mssgle:LineSegment
+                    End="-154.738095238099,18.1547619047619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="781.35317460317,862.007936507937">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-283.06349206349,183.373015873016"
+              Start="0,0"
+              End="-275.56349206349,183.373015873016">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-137.531746031745,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-137.531746031745,0"
+                    Point2="-141.531746031745,0"
+                    Point3="-141.531746031745,4" />
+                  <mssgle:LineSegment
+                    End="-141.531746031745,179.373015873016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-141.531746031745,179.373015873016"
+                    Point2="-141.531746031745,183.373015873016"
+                    Point3="-145.531746031745,183.373015873016" />
+                  <mssgle:LineSegment
+                    End="-275.56349206349,183.373015873016" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="509.611111111111,552.599206349206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.388888888888,-377.170634920634"
+              Start="0,0"
+              End="94.888888888888,-377.170634920634">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47.194444444444,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.194444444444,0"
+                    Point2="51.194444444444,0"
+                    Point3="51.194444444444,-4" />
+                  <mssgle:LineSegment
+                    End="51.194444444444,-373.170634920634" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.194444444444,-373.170634920634"
+                    Point2="51.194444444444,-377.170634920634"
+                    Point3="55.194444444444,-377.170634920634" />
+                  <mssgle:LineSegment
+                    End="94.888888888888,-377.170634920634" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

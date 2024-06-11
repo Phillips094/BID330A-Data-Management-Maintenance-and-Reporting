@@ -1,0 +1,423 @@
+table 'Project Measures'
+	lineageTag: 01f0cd05-bede-4e77-b459-cad67d03b982
+
+	measure 'Hello World' = "Hello World 🌎"
+		displayFolder: Test Measures
+		lineageTag: 88a568e0-3a35-48c2-839f-8d365a6840d4
+
+		changedProperty = IsHidden
+
+	measure 'ETL Log Count' =
+			
+			VAR _etllogrows = COUNTROWS('ETL Log')
+			
+			RETURN IF(ISBLANK(_etllogrows), 0, _etllogrows)
+		formatString: 0
+		displayFolder: ETL Log Measures
+		lineageTag: 1e027ed5-b8b0-402a-beaa-2012ab003990
+
+	measure 'ETL Log Errors' =
+			
+			VAR _errors = CALCULATETABLE('ETL Log', OR(CONTAINSSTRING('ETL Log'[ETLLogMessage], "Error"), CONTAINSSTRING('ETL Log'[ETLLogMessage], "fail")))
+			VAR _counterrors = COUNTROWS(_errors)
+			
+			RETURN IF(ISBLANK(_counterrors), 0, _counterrors)
+		formatString: 0
+		displayFolder: ETL Log Measures
+		lineageTag: b17cb2da-8b86-4dfe-a0e8-844e0b3cc11a
+
+	measure 'ETL Log Successes' =
+			
+			VAR _successes = CALCULATETABLE('ETL Log', NOT(OR(CONTAINSSTRING('ETL Log'[ETLLogMessage], "error"), CONTAINSSTRING('ETL Log'[ETLLogMessage], "fail"))))
+			VAR _successescount = COUNTROWS(_successes)
+			
+			RETURN IF(ISBLANK(_successescount), 0, _successescount)
+		formatString: 0
+		displayFolder: ETL Log Measures
+		lineageTag: 6a84025d-888e-4488-9962-0d1499d9884c
+
+	measure 'ETL Log Konbon' =
+			SWITCH([ETL Log Errors],
+			1, "#E42925",
+			"#41AC4C")
+		displayFolder: ETL Log Measures
+		lineageTag: ddaba61e-2ce2-4dc8-be1b-9d65f4f67997
+
+	measure 'ETL Log Last Error Day/Time' =
+			
+			VAR _errors = CALCULATETABLE('ETL Log', ALL('ETL Log'), OR(CONTAINSSTRING('ETL Log'[ETLLogMessage], "error"), CONTAINSSTRING('ETL Log'[ETLLogMessage], "fail")))
+			VAR _lasterrorday = MAXX(_errors, 'ETL Log'[ETLDate])
+			VAR _lasterrortime = MAXX(_errors, 'ETL Log'[ETLTime])
+			VAR _datetime = IF(ISBLANK(_lasterrorday), "No Errors Going Back!", FORMAT(CONVERT(_lasterrorday & " " & _lasterrortime, DATETIME), "MM/DD/YYYY HH:MM:SS"))
+			
+			RETURN IF(ISBLANK(_lasterrorday), "No Errors Going Back!", _datetime)
+		displayFolder: ETL Log Measures
+		lineageTag: d3bbd7d7-0afa-4000-892d-01348e7c6a72
+
+	measure 'ETL Log Day/Time Since Errors' = ```
+			
+			VAR _errors = CALCULATETABLE('ETL Log', ALL('ETL Log'), OR(CONTAINSSTRING('ETL Log'[ETLLogMessage], "error"), CONTAINSSTRING('ETL Log'[ETLLogMessage], "fail")))
+			VAR _lasterrorday = MAXX(_errors, 'ETL Log'[ETLDate])
+			VAR _lasterrortime = MAXX(_errors, 'ETL Log'[ETLDateTime])
+			VAR _datetime = CONVERT(CONCATENATE(_lasterrorday, _lasterrortime), DATETIME)
+			VAR _daydifference = DATEDIFF(TODAY(), _lasterrorday, DAY)
+			VAR _hourdifference = IF(MOD(DATEDIFF(_lasterrortime, NOW(), HOUR), 24) < 1, 0, MOD(DATEDIFF(_lasterrortime, NOW(), HOUR), 24))
+			VAR _minutedifference = MOD(DATEDIFF(_lasterrortime, NOW(), MINUTE), 60)
+			
+			VAR _errorstatement = IF(ISBLANK(_daydifference) && ISBLANK(_hourdifference) ,
+			                        "No Errors Going Back!", 
+			                        _daydifference & ":" & _hourdifference & ":" & _minutedifference)
+			                        
+			RETURN _errorstatement
+			```
+		displayFolder: ETL Log Measures
+		lineageTag: 9e4ba917-26e9-4068-930e-e63a781345d6
+
+	measure 'ETL Log Last Success Day/Time' =
+			
+			VAR _errors = CALCULATETABLE('ETL Log', ALL('ETL Log'), NOT(OR(CONTAINSSTRING('ETL Log'[ETLLogMessage], "error"), CONTAINSSTRING('ETL Log'[ETLLogMessage], "fail"))))
+			VAR _lastsuccessday = MAXX(_errors, 'ETL Log'[ETLDate])
+			VAR _lastsuccesstime = MAXX(_errors, 'ETL Log'[ETLTime])
+			VAR _datetime = FORMAT(CONVERT(_lastsuccessday & " " & _lastsuccesstime, DATETIME), "MM/DD/YYYY HH:MM:SS")
+			
+			RETURN IF(ISBLANK(_datetime), "No Successes Going Back!", _datetime)
+		displayFolder: ETL Log Measures
+		lineageTag: 98b62233-8c00-4d7b-bbf0-041650e57aad
+
+	measure 'Dim Countries Row Count' =
+			
+			VAR _countries = COUNTROWS('Dim Countries')
+			
+			RETURN IF(ISBLANK(_countries), 0, _countries)
+		formatString: #,0
+		displayFolder: Data Model Administration
+		lineageTag: 5a3cf77e-8792-49ac-a31d-f930c49cc595
+
+	measure 'Dim Regions Row Count' =
+			
+			VAR _regions = COUNTROWS('Dim Regions')
+			
+			RETURN IF(ISBLANK(_regions), 0, _regions)
+		formatString: #,0
+		displayFolder: Data Model Administration
+		lineageTag: b0e6b677-1c39-428e-8fc8-2f5dfe35ffd1
+
+	measure 'Dim Dates Row Count' =
+			
+			VAR _dates = COUNTROWS('Dim Dates')
+			
+			RETURN IF(ISBLANK(_dates), 0, _dates)
+		formatString: #,0
+		displayFolder: Data Model Administration
+		lineageTag: bf0be988-c737-4507-958a-2db2f147f3ee
+
+	measure 'Fact Covid Row Count' =
+			
+			VAR _covid = COUNTROWS('Fact Covid')
+			
+			RETURN IF(ISBLANK(_covid), 0, _covid)
+		formatString: #,0
+		displayFolder: Data Model Administration
+		lineageTag: cd0c7676-ddf8-4770-8ed8-e8e8f0c7f68d
+
+	measure 'Fact Debt Row Count' =
+			
+			VAR _debt = COUNTROWS('Fact Debt')
+			
+			RETURN IF(ISBLANK(_debt), 0, _debt)
+		formatString: #,0
+		displayFolder: Data Model Administration
+		lineageTag: e994cc04-537a-4f78-a5dd-1f7e9d6a2422
+
+	measure 'Covid Confirmed Change' =
+			
+			VAR _confirmed = CALCULATE(SUM('Fact Covid'[Confirmed_Change]))
+			RETURN _confirmed
+		formatString: #,0
+		displayFolder: Covid Measures
+		lineageTag: 3bb78f69-7183-4471-ae31-a62e0c89bb1e
+
+	measure 'Covid Region Count' =
+			
+			VAR _covidcount = CALCULATE(COUNT('Fact Covid'[FactCovidKey])) //, CROSSFILTER('Dim Regions'[RegionKey], 'Fact Covid'[RegionKey], Both))
+			
+			RETURN IF(ISBLANK(_covidcount), 0, _covidcount)
+		formatString: #,0.00
+		displayFolder: Covid Measures
+		lineageTag: add014b9-4fbb-4d19-b739-567e24ecbfe9
+
+	measure 'AVG Total Public Debt Over Time' =
+			
+			VAR _debt = CALCULATE(AVERAGE('Fact Debt'[Total_Public_Debt_Outstanding]))
+			
+			RETURN _debt
+		displayFolder: Debt Measures
+		lineageTag: e1c5d8a4-6f1f-4725-aade-fa7e7696a756
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Public Debt Over Time' =
+			
+			VAR _debt = CALCULATE(AVERAGE('Fact Debt'[Public_Debt]))
+			
+			RETURN _debt
+		displayFolder: Debt Measures
+		lineageTag: 9466a69f-4d55-4ce2-8f67-b1df35e6c959
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Intragovernmental Holdings Over Time' =
+			
+			VAR _debt = CALCULATE(AVERAGE('Fact Debt'[Intragovernmental_Holdings]))
+			
+			RETURN _debt
+		displayFolder: Debt Measures
+		lineageTag: 863ad0ca-ddc4-4ef4-bbfe-a213c8f620e6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Linear Regression Government Public Debt YOY%' =
+			
+			VAR _DebtLR = LINESTX(ALLSELECTED('Fact Debt'[Record_Date]), [Total Government Debt YOY% (Record Date)], 'Fact Debt'[Record_Date])
+			VAR _slope = SELECTCOLUMNS(_DebtLR, [Slope1])
+			VAR _intercept = SELECTCOLUMNS(_DebtLR, [Intercept])
+			VAR x = SELECTEDVALUE('Fact Debt'[Record_Date])
+			var y = x * _slope + _intercept
+			
+			RETURN y
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Debt Measures
+		lineageTag: d1734d03-06a6-48ec-9115-5acb561ec766
+
+	measure CovidTest = ```
+			
+				VAR _table = CALCULATETABLE('Fact Covid', 'Fact Covid'[Confirmed_Change] >= 0)
+				VAR _sumtable = SUMX(_table, 'Fact Covid'[Confirmed_Change])
+				RETURN _sumtable
+			```
+		formatString: 0
+		displayFolder: Test Measures
+		lineageTag: ec1efbcf-5c11-497f-a15d-b630f4315881
+
+	measure 'daytime now' = NOW()
+		formatString: General Date
+		displayFolder: Test Measures
+		lineageTag: 400d2f4b-1999-401c-b6f3-b87a921c2049
+
+	measure 'Total Government Debt Over Time' =
+			
+			VAR _debt = CALCULATE(LASTNONBLANKVALUE('Fact Debt'[Record_Date], SUM('Fact Debt'[Total_Public_Debt_Outstanding])))
+			RETURN _debt
+		formatString: 0
+		displayFolder: Debt Measures
+		lineageTag: 1c008135-4109-4e01-b580-8eda22d50dfb
+
+	measure 'Total Public Debt Over Time' =
+			
+			VAR _debt = CALCULATE(LASTNONBLANKVALUE('Fact Debt'[Record_Date], SUM('Fact Debt'[Public_Debt])))
+			RETURN _debt
+		displayFolder: Debt Measures
+		lineageTag: 204ddb4b-5882-449c-84f8-53df883c9877
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Intragovernmental Holdings Over Time' =
+			
+			VAR _debt = CALCULATE(LASTNONBLANKVALUE('Fact Debt'[Record_Date], SUM('Fact Debt'[Intragovernmental_Holdings])))
+			RETURN _debt
+		displayFolder: Debt Measures
+		lineageTag: 01190be7-9481-4c5a-9269-2256bd9f04fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Covid Cases' =
+			
+			VAR _covidcases = CALCULATE(LASTNONBLANKVALUE('Fact Covid'[Confirmed], SUM('Fact Covid'[Confirmed])))
+			RETURN _covidcases
+		formatString: #,0
+		displayFolder: Covid Measures
+		lineageTag: 492b2c9e-91db-47c8-bb46-06dbb5e4d912
+
+	measure 'Total Government Debt YOY%' = ```
+			
+			VAR ValueCurrentPeriod = [Total Government Debt Over Time]
+			VAR ValuePreviousPeriod = 
+			CALCULATE(
+			    [Total Government Debt Over Time],
+			    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+			)
+			VAR ValueYOY = 
+			    IF (
+			        NOT ISBLANK(ValueCurrentPeriod)
+			            && NOT ISBLANK(ValuePreviousPeriod),
+			            ValueCurrentPeriod - ValuePreviousPeriod
+			        )
+			VAR Result = 
+			    DIVIDE(
+			            ValueYOY,
+			            ValuePreviousPeriod
+			          )
+			RETURN Result
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Debt Measures
+		lineageTag: 90ee2b5e-8c59-4918-9311-7f26756a6f8c
+
+	measure 'Total Public Debt YOY%' = ```
+			
+			VAR ValueCurrentPeriod = [Total Public Debt Over Time]
+			VAR ValuePreviousPeriod = 
+			CALCULATE(
+			    [Total Public Debt Over Time],
+			    SAMEPERIODLASTYEAR( 'Fact Debt'[Record_Date] )
+			)
+			VAR ValueYOY = 
+			    IF (
+			        NOT ISBLANK(ValueCurrentPeriod)
+			            && NOT ISBLANK(ValuePreviousPeriod),
+			            ValueCurrentPeriod - ValuePreviousPeriod
+			        )
+			VAR Result = 
+			    DIVIDE(
+			            ValueYOY,
+			            ValuePreviousPeriod
+			          )
+			RETURN Result
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Debt Measures
+		lineageTag: 2d2f6dc2-12e0-4694-9a44-8f6b5cedc3a3
+
+	measure 'Total Intragovernmental Holdings YOY%' = ```
+			
+			VAR ValueCurrentPeriod = [Total Intragovernmental Holdings Over Time]
+			VAR ValuePreviousPeriod = 
+			CALCULATE(
+			    [Total Intragovernmental Holdings Over Time],
+			    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+			)
+			VAR ValueYOY = 
+			    IF (
+			        NOT ISBLANK(ValueCurrentPeriod)
+			            && NOT ISBLANK(ValuePreviousPeriod),
+			            ValueCurrentPeriod - ValuePreviousPeriod
+			        )
+			VAR Result = 
+			    DIVIDE(
+			            ValueYOY,
+			            ValuePreviousPeriod
+			          )
+			RETURN Result
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Debt Measures
+		lineageTag: 63e0a3ab-a60c-4e93-9c4d-ca8f8c79198d
+
+	measure 'Total Covid Cases YOY%' = ```
+			
+			VAR ValueCurrentPeriod = [Covid Cases]
+			VAR ValuePreviousPeriod = 
+			CALCULATE(
+			    [Covid Cases],
+			    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+			)
+			VAR ValueYOY = 
+			    IF (
+			        NOT ISBLANK(ValueCurrentPeriod)
+			            && NOT ISBLANK(ValuePreviousPeriod),
+			            ValueCurrentPeriod - ValuePreviousPeriod
+			        )
+			VAR Result = 
+			    DIVIDE(
+			            ValueYOY,
+			            ValuePreviousPeriod
+			          )
+			RETURN Result
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Covid Measures
+		lineageTag: a171e232-6ec3-4de8-88da-8671106bf914
+
+	measure 'Covid Deaths' =
+			
+			VAR _coviddeaths = CALCULATE(LASTNONBLANKVALUE('Fact Covid'[Deaths], SUM('Fact Covid'[Deaths])))
+			RETURN _coviddeaths
+		formatString: #,0.00
+		displayFolder: Covid Measures
+		lineageTag: b98f8477-8d6b-4ec2-966d-f4960e073c16
+
+	measure 'Linear Regression Government Public Debt' =
+			
+			VAR _DebtLR = LINESTX(ALLSELECTED('Fact Debt'[Record_Date]), [Total Government Debt Over Time], 'Fact Debt'[Record_Date])
+			VAR _slope = SELECTCOLUMNS(_DebtLR, [Slope1])
+			VAR _intercept = SELECTCOLUMNS(_DebtLR, [Intercept])
+			VAR x = SELECTEDVALUE('Fact Debt'[Record_Date])
+			var y = x * _slope + _intercept
+			
+			RETURN y
+		displayFolder: Debt Measures
+		lineageTag: 5bc15929-c79b-4860-bacf-41a2b9129192
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Government Debt YOY% (Record Date)' = ```
+			
+			VAR ValueCurrentPeriod = [Total Government Debt Over Time]
+			VAR ValuePreviousPeriod = 
+			CALCULATE(
+			    [Total Government Debt Over Time],
+			    SAMEPERIODLASTYEAR( 'Fact Debt'[Record_Date] )
+			)
+			VAR ValueYOY = 
+			    IF (
+			        NOT ISBLANK(ValueCurrentPeriod)
+			            && NOT ISBLANK(ValuePreviousPeriod),
+			            ValueCurrentPeriod - ValuePreviousPeriod
+			        )
+			VAR Result = 
+			    DIVIDE(
+			            ValueYOY,
+			            ValuePreviousPeriod
+			          )
+			RETURN Result
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Debt Measures
+		lineageTag: b4441836-9db7-4d58-868e-725f23efd3eb
+
+	measure 'Linear Regression Covid Cases' =
+			
+			VAR _DebtLR = LINESTX(ALLSELECTED('Fact Covid'[Updated]), [Covid Cases], 'Fact Covid'[Updated])
+			VAR _slope = SELECTCOLUMNS(_DebtLR, [Slope1])
+			VAR _intercept = SELECTCOLUMNS(_DebtLR, [Intercept])
+			VAR x = SELECTEDVALUE('Fact Covid'[Updated])
+			var y = x * _slope + _intercept
+			
+			RETURN y
+		displayFolder: Covid Measures
+		lineageTag: 50596485-4763-49a7-ab7c-4d49ef8e8879
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Covid Deaths' =
+			
+			VAR _coviddeaths = AVERAGE('Fact Covid'[Deaths])
+			RETURN _coviddeaths
+		displayFolder: Covid Measures
+		lineageTag: 6d794f7a-7c7e-4a08-906b-3871531fc7ec
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Project Measures' = m
+		mode: import
+		queryGroup: Measures
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,149 @@
+table 'Fact Debt'
+	lineageTag: e80500a4-e61e-405a-8e3e-6d90d5231c73
+
+	column FactDebtKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Keys
+		lineageTag: ba7b3722-157b-4794-aa47-2e652d4f3b4e
+		summarizeBy: none
+		sourceColumn: FactDebtKey
+
+		annotation SummarizationSetBy = User
+
+	column Record_Date
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: Fact Debt Fields
+		lineageTag: ed02d321-8730-4516-94a0-51647454f5ff
+		summarizeBy: none
+		sourceColumn: Record_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Keys
+		lineageTag: 1e87ff58-cb39-44b2-bf90-240f81afe78e
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column Public_Debt
+		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Fact Debt Fields
+		lineageTag: a3847423-af34-460a-9c42-271ece1af524
+		summarizeBy: sum
+		sourceColumn: Public_Debt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intragovernmental_Holdings
+		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Fact Debt Fields
+		lineageTag: fcb5e997-98fb-45b9-816d-fc899cd42ceb
+		summarizeBy: sum
+		sourceColumn: Intragovernmental_Holdings
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Public_Debt_Outstanding
+		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Fact Debt Fields
+		lineageTag: b3481179-d3dd-438c-a89e-0f371e5fedd7
+		summarizeBy: sum
+		sourceColumn: Total_Public_Debt_Outstanding
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Line_Number
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: 7da5130c-dfe0-4b4f-b2c4-40f65fe0040f
+		summarizeBy: none
+		sourceColumn: Source_Line_Number
+
+		annotation SummarizationSetBy = User
+
+	column Fiscal_Year
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: 93538970-4b55-42d0-8ccc-4019ee2775ec
+		summarizeBy: none
+		sourceColumn: Fiscal_Year
+
+		annotation SummarizationSetBy = User
+
+	column Fiscal_Quarter_Number
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: 1b0a6a89-4cdd-4884-83b1-86e284a2b516
+		summarizeBy: none
+		sourceColumn: Fiscal_Quarter_Number
+
+		annotation SummarizationSetBy = User
+
+	column Calendar_Year
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: 6601b2f1-b684-4e4d-8ca7-e86d31a4b901
+		summarizeBy: none
+		sourceColumn: Calendar_Year
+
+		annotation SummarizationSetBy = User
+
+	column Calendar_Quarter_Number
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: d6dd2c7a-2ad1-4d3e-b8c9-43f1e2eea238
+		summarizeBy: none
+		sourceColumn: Calendar_Quarter_Number
+
+		annotation SummarizationSetBy = User
+
+	column Calendar_Month_Number
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: 5cf429a4-ff61-4502-b28c-de5ed10f4245
+		summarizeBy: none
+		sourceColumn: Calendar_Month_Number
+
+		annotation SummarizationSetBy = User
+
+	column Calendar_Day_Number
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Debt Fields
+		lineageTag: c0ac6457-08f8-4507-b213-28513b2c1783
+		summarizeBy: none
+		sourceColumn: Calendar_Day_Number
+
+		annotation SummarizationSetBy = User
+
+	partition 'Fact Debt' = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(#"UW Server", #"Database Gold_Debt"),
+				    dbo_vFactDebt = Source{[Schema="dbo",Item="vFactDebt"]}[Data]
+				in
+				    dbo_vFactDebt
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

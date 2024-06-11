@@ -1,0 +1,52 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Dimensions
+
+	annotation PBI_QueryGroupOrder = 3
+
+queryGroup Facts
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup Measures
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup Parameters
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// ETL Log For Our ETL Process
+queryGroup 'ETL Log Admin'
+
+	annotation PBI_QueryGroupOrder = 2
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.129.1229.0 (24.05)
+
+annotation PBI_QueryOrder = ["Project Measures","Dim Countries","Dim Dates","Dim Regions","LocalHost Server","LocalHost Server Database Gold_Debt","UW Server","Database Gold_Debt","database","username","Fact Covid","Fact Debt","ETL Log"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","CalcGroup","DevMode"]
+
+annotation __TEdtr = 1
+
+ref table 'Dim Regions'
+ref table 'Dim Dates'
+ref table 'Dim Countries'
+ref table 'Project Measures'
+ref table 'Fact Covid'
+ref table 'Fact Debt'
+ref table 'ETL Log'
+ref table 'Time Intelligence Calculation Group'
+ref table 'Debt Linear Regression (Total)'
+
+ref cultureInfo en-US
+

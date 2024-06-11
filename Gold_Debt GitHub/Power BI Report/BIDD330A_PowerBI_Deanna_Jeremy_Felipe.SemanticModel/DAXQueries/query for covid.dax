@@ -1,0 +1,10 @@
+DEFINE MEASURE 'Project Measures'[CovidTest] = 
+	VAR _table = CALCULATETABLE('Fact Covid', 'Fact Covid'[Confirmed_Change] >= 0)
+	VAR _sumtable = SUMX(_table, 'Fact Covid'[Confirmed_Change])
+	RETURN _sumtable
+
+EVALUATE
+COLUMNSTATISTICS()
+
+EVALUATE
+CALCULATETABLE('Fact Covid', 'Fact Covid'[RegionKey] =1)

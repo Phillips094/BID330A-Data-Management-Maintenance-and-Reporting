@@ -1,0 +1,226 @@
+table 'Fact Covid'
+	lineageTag: 492e9c90-d0c2-4ce5-8481-56f8943f4060
+
+	column FactCovidKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Keys
+		lineageTag: eb9febf2-ec84-4692-a3c4-549d8f8db2cd
+		summarizeBy: none
+		sourceColumn: FactCovidKey
+
+		annotation SummarizationSetBy = User
+
+	column ID
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: 71d4a083-7a25-47a6-a473-472e36eb06f2
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column Updated
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Fact Covid Fields
+		lineageTag: 5b1a869d-b3d2-419e-b871-5e4fb0a856b9
+		summarizeBy: none
+		sourceColumn: Updated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Keys
+		lineageTag: 9a296ed0-ffb2-4369-97f3-f1f44d5fcf4e
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column Confirmed
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: 81e89fbe-3142-46c1-83c1-3f9799a884e6
+		summarizeBy: sum
+		sourceColumn: Confirmed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Confirmed_Change
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: 9e9a916f-94ee-4e4b-8684-c5bc70779c8e
+		summarizeBy: sum
+		sourceColumn: Confirmed_Change
+
+		annotation SummarizationSetBy = Automatic
+
+	column Deaths
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: a6218472-855e-4a3c-ba50-fdd98d9c8e6c
+		summarizeBy: sum
+		sourceColumn: Deaths
+
+		annotation SummarizationSetBy = Automatic
+
+	column Deaths_Change
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: 56b8ddac-e2bf-486c-8af5-5abb605783ba
+		summarizeBy: sum
+		sourceColumn: Deaths_Change
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recovered
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: 9e089081-bc03-45cf-9063-e424c4ab7c8b
+		summarizeBy: sum
+		sourceColumn: Recovered
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recovered_Change
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Fields
+		lineageTag: c8d3fd6d-b262-4b0d-b77f-5ddd33f8d203
+		summarizeBy: sum
+		sourceColumn: Recovered_Change
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: eebe654f-30eb-45c2-9c9c-18684500d8f1
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: bed8dee8-bbed-43cb-9b8d-50c04b4528e0
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iso2
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: 62d4a4cc-6a43-4a68-9ff1-18abcdf87301
+		summarizeBy: none
+		sourceColumn: Iso2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iso3
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: 476d9954-6a6b-4169-831e-1395af32ce21
+		summarizeBy: none
+		sourceColumn: Iso3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_Region
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: 8150d517-d162-4a96-8be0-32bb29a9f433
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country_Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Keys
+		lineageTag: 111d981f-df43-45cc-8ffa-5d284844d323
+		summarizeBy: none
+		sourceColumn: CountryKey
+
+		annotation SummarizationSetBy = User
+
+	column Admin_Region_1
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: 6dbe1122-edbf-4cc2-bbc4-a91d29f0a623
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Admin_Region_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Fact Covid Keys
+		lineageTag: 331d493e-1985-4c4c-9c4e-c14aef55399d
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+		annotation SummarizationSetBy = User
+
+	column Iso_Subdivision
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: 96349f60-0ed6-41d2-9539-f40cb39362f2
+		summarizeBy: none
+		sourceColumn: Iso_Subdivision
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Region_2
+		dataType: string
+		displayFolder: Fact Covid Fields
+		lineageTag: aef43bbe-98b9-4853-83d9-2b28329eab96
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Admin_Region_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Load_Time
+		dataType: dateTime
+		formatString: General Date
+		displayFolder: Fact Covid Fields
+		lineageTag: ac396ff6-e356-4c15-b6a8-26cbcb8210a7
+		summarizeBy: none
+		sourceColumn: Load_Time
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Covid' = m
+		mode: import
+		queryGroup: Facts
+		source =
+				let
+				    Source = Sql.Database(#"UW Server", #"Database Gold_Debt"),
+				    dbo_vFactCovid = Source{[Schema="dbo",Item="vFactCovid"]}[Data]
+				in
+				    dbo_vFactCovid
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

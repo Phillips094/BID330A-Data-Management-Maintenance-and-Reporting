@@ -1,0 +1,80 @@
+table 'ETL Log'
+	lineageTag: e7e3ee26-8bea-4f60-9366-05a4d0a27214
+
+	column ETLLogID
+		dataType: int64
+		formatString: 0
+		displayFolder: ETL Log Fields
+		lineageTag: 6de24a45-94a3-47d9-95ba-2caa76a1c0bb
+		summarizeBy: none
+		sourceColumn: ETLLogID
+
+		annotation SummarizationSetBy = User
+
+	column ETLDate
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: ETL Log Keys
+		lineageTag: 39a6fd78-ddf2-44c1-ae66-ba91fbb8c4ad
+		summarizeBy: none
+		sourceColumn: ETLDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ETLTime
+		dataType: dateTime
+		formatString: Long Time
+		displayFolder: ETL Log Fields
+		lineageTag: ae76bf3b-4752-48fe-90e0-c105751b1c27
+		summarizeBy: none
+		sourceColumn: ETLTime
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column ETLAction
+		dataType: string
+		displayFolder: ETL Log Fields
+		lineageTag: ecfbf369-4a2f-4b4d-ae11-721b7f6413cf
+		summarizeBy: none
+		sourceColumn: ETLAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETLLogMessage
+		dataType: string
+		displayFolder: ETL Log Fields
+		lineageTag: 1a79d0f5-0400-4238-a411-8afd4ab91e1d
+		summarizeBy: none
+		sourceColumn: ETLLogMessage
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETLDateTime
+		dataType: dateTime
+		formatString: General Date
+		displayFolder: ETL Log Fields
+		lineageTag: 56224e21-ebd2-43b8-b1dc-7ee5550d0624
+		summarizeBy: none
+		sourceColumn: ETLDateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ETL Log' = m
+		mode: import
+		queryGroup: 'ETL Log Admin'
+		source =
+				let
+				    Source = Sql.Database(#"UW Server", #"Database Gold_Debt"),
+				    dbo_vETLLog = Source{[Schema="dbo",Item="vETLLog"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_vETLLog,{{"ETLTime", type time}, {"ETLDate", type date}}),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Changed Type", "ETLDateTime", each Text.Combine({Text.From([ETLDate], "en-US"), Text.From([ETLTime], "en-US")}, " "), type text),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Inserted Merged Column",{{"ETLDateTime", type datetime}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,3154 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "3.5.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Regions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_date.the_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "the period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "the qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "the moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "the period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "the period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_first_of_month.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheFirstOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the first of month date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_first_of_month.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheFirstOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the first of month year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the first of mth year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the first of month yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_first_of_month.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheFirstOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the first of month quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the first of month qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.867
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "the first of mth quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_first_of_month.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheFirstOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the first of month month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the first of mth month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the first of month mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_first_of_month.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheFirstOfMonth",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the first of month day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the first of mth day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_last_of_year.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheLastOfYear",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the last of year date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_last_of_year.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheLastOfYear",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the last of year year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the last of yr year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the last of year yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the end of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the final of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the closing of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the concluding of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the finishing of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the former of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latest of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latter of year year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_last_of_year.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheLastOfYear",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the last of year quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the last of year qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.867
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "the last of yr quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the end of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the final of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the closing of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the concluding of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the finishing of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the former of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latest of year quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_last_of_year.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheLastOfYear",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the last of year month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the last of yr month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the last of year mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the end of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the final of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the closing of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the concluding of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the finishing of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the former of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latest of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latter of year month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_date.the_last_of_year.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Dates",
+			          "VariationSource": "TheLastOfYear",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "the last of year day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "the last of yr day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "the end of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the final of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the closing of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the concluding of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the finishing of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the former of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latest of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the latter of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "the past of year day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Countries"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_country.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim Countries",
+			          "ConceptualProperty": "Country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "project_measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Project Measures"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "project measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "assignment measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "development measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "blueprint measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "design measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "estimate measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "forecast measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "initiative measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "plan measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "task measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "project degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "project_measure.hello_world": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Project Measures",
+			          "ConceptualProperty": "Hello World"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "hello world": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "world": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hello biosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hello ecosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hello creation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ecosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "creation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "hello domain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "hello realm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "domain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "realm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "admin_page_measures.statescount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Admin Page Measures",
+			          "ConceptualProperty": "StatesCount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DimState RowCount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "admin_page_measures.unemployment_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Admin Page Measures",
+			          "ConceptualProperty": "Unemployment Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FactUnemployment RowCount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "admin_page_measures.dimdate_rowcount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Admin Page Measures",
+			          "ConceptualProperty": "DimDate Rowcount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DimDate RowCount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "admin_page_measures.bingrowcount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Admin Page Measures",
+			          "ConceptualProperty": "BingRowCount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FactCovid RowCount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_state_in_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "dim_state.state": {
+			          "Target": {
+			            "Entity": "dim_state.state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_state.state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_state.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_are_in_states"
+			        }
+			      ]
+			    },
+			    "dim_country_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_country": {
+			          "Target": {
+			            "Entity": "dim_country"
+			          }
+			        },
+			        "dim_country.country": {
+			          "Target": {
+			            "Entity": "dim_country.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_country.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_country"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_country.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_countries_are_in_countries"
+			        }
+			      ]
+			    },
+			    "dim_state_has_dim_state_key": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "dim_state.dim_state_key": {
+			          "Target": {
+			            "Entity": "dim_state.dim_state_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Object": {
+			              "Role": "dim_state.dim_state_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_have_dim_state_keys"
+			        }
+			      ]
+			    },
+			    "dim_state_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "dim_state.state": {
+			          "Target": {
+			            "Entity": "dim_state.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Object": {
+			              "Role": "dim_state.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_have_states"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_date": {
+			          "Target": {
+			            "Entity": "dim_date.the_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_date"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_day": {
+			          "Target": {
+			            "Entity": "dim_date.the_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_day"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_day_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_day_name": {
+			          "Target": {
+			            "Entity": "dim_date.the_day_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_day_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_day_name"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_week": {
+			          "Target": {
+			            "Entity": "dim_date.the_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_week"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_ISO_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_ISO_week": {
+			          "Target": {
+			            "Entity": "dim_date.the_ISO_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_ISO_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_ISO_week"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_day_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_day_of_week": {
+			          "Target": {
+			            "Entity": "dim_date.the_day_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_day_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_day_of_week"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_month": {
+			          "Target": {
+			            "Entity": "dim_date.the_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_month"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_month_name": {
+			          "Target": {
+			            "Entity": "dim_date.the_month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_month_name"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_quarter": {
+			          "Target": {
+			            "Entity": "dim_date.the_quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_quarter"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_year": {
+			          "Target": {
+			            "Entity": "dim_date.the_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_year"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_first_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_first_of_month": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_first_of_month"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_last_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_last_of_year": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_last_of_year"
+			        }
+			      ]
+			    },
+			    "dim_date_has_the_day_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.the_day_of_year": {
+			          "Target": {
+			            "Entity": "dim_date.the_day_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_day_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_the_day_of_year"
+			        }
+			      ]
+			    },
+			    "dim_country_has_dim_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_country": {
+			          "Target": {
+			            "Entity": "dim_country"
+			          }
+			        },
+			        "dim_country.dim_ID": {
+			          "Target": {
+			            "Entity": "dim_country.dim_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_country"
+			            },
+			            "Object": {
+			              "Role": "dim_country.dim_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_countries_have_dim_ID"
+			        }
+			      ]
+			    },
+			    "dim_country_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_country": {
+			          "Target": {
+			            "Entity": "dim_country"
+			          }
+			        },
+			        "dim_country.country": {
+			          "Target": {
+			            "Entity": "dim_country.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_country"
+			            },
+			            "Object": {
+			              "Role": "dim_country.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_countries_have_countries"
+			        }
+			      ]
+			    },
+			    "project_measure_has_dim_country_total_row_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.dim_country_total_row_count": {
+			          "Target": {
+			            "Entity": "project_measure.dim_country_total_row_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.dim_country_total_row_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_dim_country_total_row_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_dim_date_total_count_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.dim_date_total_count_of_month": {
+			          "Target": {
+			            "Entity": "project_measure.dim_date_total_count_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.dim_date_total_count_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_dim_date_total_count_of_month"
+			        }
+			      ]
+			    },
+			    "dim_date_has_project_measure_dim_date_total_row_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "project_measure.dim_date_total_row_count": {
+			          "Target": {
+			            "Entity": "project_measure.dim_date_total_row_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "project_measure.dim_date_total_row_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_dim_date_total_row_count"
+			        }
+			      ]
+			    },
+			    "dim_state_has_project_measure_dim_state_states_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "project_measure.dim_state_states_count": {
+			          "Target": {
+			            "Entity": "project_measure.dim_state_states_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Object": {
+			              "Role": "project_measure.dim_state_states_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_have_dim_state_states_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_dim_state_total_row_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.dim_state_total_row_count": {
+			          "Target": {
+			            "Entity": "project_measure.dim_state_total_row_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.dim_state_total_row_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_dim_state_total_row_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_fact_covid_country_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.fact_covid_country_count": {
+			          "Target": {
+			            "Entity": "project_measure.fact_covid_country_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_covid_country_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_fact_covid_country_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_fact_covid_country_distinct_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.fact_covid_country_distinct_count": {
+			          "Target": {
+			            "Entity": "project_measure.fact_covid_country_distinct_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_covid_country_distinct_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_fact_covid_country_distinct_count"
+			        }
+			      ]
+			    },
+			    "dim_state_has_project_measure_fact_covid_states_distinct_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "project_measure.fact_covid_states_distinct_count": {
+			          "Target": {
+			            "Entity": "project_measure.fact_covid_states_distinct_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_covid_states_distinct_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_have_fact_covid_states_distinct_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_fact_unemployment_total_row_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.fact_unemployment_total_row_count": {
+			          "Target": {
+			            "Entity": "project_measure.fact_unemployment_total_row_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_unemployment_total_row_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_fact_unemployment_total_row_count"
+			        }
+			      ]
+			    },
+			    "project_measure_has_total_row_count_of_entrie_dashboard": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.total_row_count_of_entrie_dashboard": {
+			          "Target": {
+			            "Entity": "project_measure.total_row_count_of_entrie_dashboard"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.total_row_count_of_entrie_dashboard"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_total_row_count_of_entrie_dashboard"
+			        }
+			      ]
+			    },
+			    "dim_state_has_project_measure_bing_fact_SumX_confirmed": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Regions"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_state": {
+			          "Target": {
+			            "Entity": "dim_state"
+			          }
+			        },
+			        "project_measure.bing_fact_SumX_confirmed": {
+			          "Target": {
+			            "Entity": "project_measure.bing_fact_SumX_confirmed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_state"
+			            },
+			            "Object": {
+			              "Role": "project_measure.bing_fact_SumX_confirmed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_states_have_bing_fact_SumX_confirmed"
+			        }
+			      ]
+			    },
+			    "project_measure_has_fact_covid_unemployment_claims_total": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.fact_covid_unemployment_claims_total": {
+			          "Target": {
+			            "Entity": "project_measure.fact_covid_unemployment_claims_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_covid_unemployment_claims_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_fact_covid_unemployment_claims_total"
+			        }
+			      ]
+			    },
+			    "project_measure_has_fact_unemployment_claims_total": {
+			      "Binding": {
+			        "ConceptualEntity": "Project Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_measure": {
+			          "Target": {
+			            "Entity": "project_measure"
+			          }
+			        },
+			        "project_measure.fact_unemployment_claims_total": {
+			          "Target": {
+			            "Entity": "project_measure.fact_unemployment_claims_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_measure"
+			            },
+			            "Object": {
+			              "Role": "project_measure.fact_unemployment_claims_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_measures_have_fact_unemployment_claims_total"
+			        }
+			      ]
+			    },
+			    "dim_date_the_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_date": {
+			          "Target": {
+			            "Entity": "dim_date.the_date"
+			          }
+			        },
+			        "dim_date.the_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_date_have_the_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "dim_date_the_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_date_hierarchy_have_the_year"
+			        }
+			      ]
+			    },
+			    "dim_date_the_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_date_hierarchy_have_the_quarter"
+			        }
+			      ]
+			    },
+			    "dim_date_the_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_date_hierarchy_have_the_month"
+			        }
+			      ]
+			    },
+			    "dim_date_the_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dim_date.the_date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_date_hierarchy_have_the_day"
+			        }
+			      ]
+			    },
+			    "dim_date_the_first_of_month_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_first_of_month": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month"
+			          }
+			        },
+			        "dim_date.the_first_of_month.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_first_of_month"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_first_of_month_have_the_first_of_month_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "dim_date_the_first_of_month_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_first_of_month.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_first_of_month.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_first_of_month_date_hierarchy_have_the_first_of_month_year"
+			        }
+			      ]
+			    },
+			    "dim_date_the_first_of_month_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_first_of_month.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_first_of_month.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_first_of_month_date_hierarchy_have_the_first_of_month_quarter"
+			        }
+			      ]
+			    },
+			    "dim_date_the_first_of_month_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_first_of_month.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_first_of_month.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_first_of_month_date_hierarchy_have_the_first_of_month_month"
+			        }
+			      ]
+			    },
+			    "dim_date_the_first_of_month_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_first_of_month.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_first_of_month.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dim_date.the_first_of_month.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_first_of_month.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_first_of_month_date_hierarchy_have_the_first_of_month_day"
+			        }
+			      ]
+			    },
+			    "dim_date_the_last_of_year_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_last_of_year": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year"
+			          }
+			        },
+			        "dim_date.the_last_of_year.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_last_of_year"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_last_of_year_have_the_last_of_year_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "dim_date_the_last_of_year_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_last_of_year.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_last_of_year.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_last_of_year_date_hierarchy_have_the_last_of_year_year"
+			        }
+			      ]
+			    },
+			    "dim_date_the_last_of_year_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_last_of_year.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_last_of_year.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_last_of_year_date_hierarchy_have_the_last_of_year_quarter"
+			        }
+			      ]
+			    },
+			    "dim_date_the_last_of_year_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_last_of_year.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_last_of_year.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_last_of_year_date_hierarchy_have_the_last_of_year_month"
+			        }
+			      ]
+			    },
+			    "dim_date_the_last_of_year_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.the_last_of_year.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_date.the_last_of_year.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dim_date.the_last_of_year.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_date.the_last_of_year.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "the_last_of_year_date_hierarchy_have_the_last_of_year_day"
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

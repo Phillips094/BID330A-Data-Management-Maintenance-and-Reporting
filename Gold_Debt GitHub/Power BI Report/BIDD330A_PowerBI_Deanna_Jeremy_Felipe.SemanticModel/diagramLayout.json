@@ -1,0 +1,298 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 985.79970326409489,
+            "y": 0
+          },
+          "nodeIndex": "Project Measures",
+          "nodeLineageTag": "01f0cd05-bede-4e77-b459-cad67d03b982",
+          "size": {
+            "height": 566.43273986152337,
+            "width": 252.820474777448
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 322.4574678536103
+          },
+          "nodeIndex": "Dim Dates",
+          "nodeLineageTag": "1eb30080-5431-4b44-8382-63892f647aca",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 435
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Dim Countries",
+          "nodeLineageTag": "1c2fdd72-ab4e-4877-8e70-feb47bfd6601",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 124
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 165.62017804154306
+          },
+          "nodeIndex": "Dim Regions",
+          "nodeLineageTag": "3019c980-d6cc-4c69-b099-7c28d2ea8224",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 145
+        },
+        {
+          "location": {
+            "x": 590.93175074183989,
+            "y": 95.71414441147391
+          },
+          "nodeIndex": "Fact Covid",
+          "nodeLineageTag": "492e9c90-d0c2-4ce5-8481-56f8943f4060",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 572.14243323442156,
+            "y": 338.35954500494563
+          },
+          "nodeIndex": "Fact Debt",
+          "nodeLineageTag": "e80500a4-e61e-405a-8e3e-6d90d5231c73",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 6,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 552.11226508407492,
+            "y": 607.93175074183978
+          },
+          "nodeIndex": "ETL Log",
+          "nodeLineageTag": "e7e3ee26-8bea-4f60-9366-05a4d0a27214",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 203.76409495548967
+        },
+        {
+          "location": {
+            "x": 1512.3946587537093,
+            "y": 618.57368941641937
+          },
+          "nodeIndex": "Debt Linear Regression (Total)",
+          "nodeLineageTag": "0aa5319d-340b-4b63-a5f6-a9f1c7aadf85",
+          "size": {
+            "height": 200,
+            "width": 291.7161226508407
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 898.40900098911959,
+            "y": 589.32937685459945
+          },
+          "nodeIndex": "Time Intelligence Calculation Group",
+          "nodeLineageTag": "020e2823-1053-4909-8e56-42e39def8b17",
+          "size": {
+            "height": 145,
+            "width": 336.88526211671604
+          },
+          "zIndex": 7
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79.700433582972011,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 684,
+            "y": 130
+          },
+          "nodeIndex": "Fact Covid",
+          "nodeLineageTag": "492e9c90-d0c2-4ce5-8481-56f8943f4060",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 330
+          },
+          "nodeIndex": "Dim Dates",
+          "nodeLineageTag": "1eb30080-5431-4b44-8382-63892f647aca",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 173
+          },
+          "nodeIndex": "Dim Regions",
+          "nodeLineageTag": "3019c980-d6cc-4c69-b099-7c28d2ea8224",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Dim Countries",
+          "nodeLineageTag": "1c2fdd72-ab4e-4877-8e70-feb47bfd6601",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        }
+      ],
+      "name": "Covid Model",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 595,
+            "y": 256
+          },
+          "nodeIndex": "Fact Debt",
+          "nodeLineageTag": "e80500a4-e61e-405a-8e3e-6d90d5231c73",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 41,
+            "y": 145
+          },
+          "nodeIndex": "Dim Dates",
+          "nodeLineageTag": "1eb30080-5431-4b44-8382-63892f647aca",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Debt Model",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 440,
+            "y": 195
+          },
+          "nodeIndex": "ETL Log",
+          "nodeLineageTag": "e7e3ee26-8bea-4f60-9366-05a4d0a27214",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 17,
+            "y": 72
+          },
+          "nodeIndex": "Dim Dates",
+          "nodeLineageTag": "1eb30080-5431-4b44-8382-63892f647aca",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "ETL Log Model",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

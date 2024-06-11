@@ -1,0 +1,71 @@
+table 'Time Intelligence Calculation Group'
+	lineageTag: 020e2823-1053-4909-8e56-42e39def8b17
+
+	calculationGroup
+
+		calculationItem 'Current Measure' = SELECTEDMEASURE()
+
+		calculationItem PY =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+				)
+
+		calculationItem YOY = ```
+				VAR ValueCurrentPeriod = SELECTEDMEASURE()
+				VAR ValuePreviousPeriod = 
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+				)
+				VAR Result = 
+				    IF (
+				        NOT ISBLANK(ValueCurrentPeriod)
+				            && NOT ISBLANK(ValuePreviousPeriod),
+				            ValueCurrentPeriod - ValuePreviousPeriod
+				        )
+				RETURN 
+				    Result
+				```
+
+		calculationItem YOY% = ```
+				VAR ValueCurrentPeriod = SELECTEDMEASURE()
+				VAR ValuePreviousPeriod = 
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    SAMEPERIODLASTYEAR( 'Dim Dates'[FullDate] )
+				)
+				VAR ValueYOY = 
+				    IF (
+				        NOT ISBLANK(ValueCurrentPeriod)
+				            && NOT ISBLANK(ValuePreviousPeriod),
+				            ValueCurrentPeriod - ValuePreviousPeriod
+				        )
+				VAR Result = 
+				    DIVIDE(
+				            ValueYOY,
+				            ValuePreviousPeriod
+				          )
+				RETURN Result
+				```
+
+			formatStringDefinition = "0.00%"
+
+	column Formula
+		dataType: string
+		lineageTag: 9c3b74c0-2556-4530-9bec-8222494290d7
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: d7fcd8f5-dc34-436a-aa23-4a9104c3b2ba
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

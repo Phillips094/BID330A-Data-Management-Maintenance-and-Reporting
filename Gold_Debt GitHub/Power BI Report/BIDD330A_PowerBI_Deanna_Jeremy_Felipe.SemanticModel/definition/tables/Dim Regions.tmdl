@@ -1,0 +1,36 @@
+table 'Dim Regions'
+	lineageTag: 3019c980-d6cc-4c69-b099-7c28d2ea8224
+
+	column RegionKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Dim Region Keys
+		lineageTag: a148d602-bb4c-4a27-8be4-e786a92c4d88
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+		annotation SummarizationSetBy = User
+
+	column Region
+		dataType: string
+		displayFolder: Dim Region Fields
+		lineageTag: 376c6d6a-4933-4635-af7a-57c80d050161
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Regions' = m
+		mode: import
+		queryGroup: Dimensions
+		source =
+				let
+				    Source = Sql.Database(#"UW Server", #"Database Gold_Debt"),
+				    dbo_vDimRegions = Source{[Schema="dbo",Item="vDimRegions"]}[Data]
+				in
+				    dbo_vDimRegions
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
